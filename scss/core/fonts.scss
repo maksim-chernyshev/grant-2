@@ -1,0 +1,25 @@
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700&display=swap');
+@import url(//db.onlinewebfonts.com/c/4f167d1d71b50a9cca4e5fb6199613db?family=PT+Rouble+Sans);
+
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('fonts/lato_bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('fonts/lato_regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('fonts/lato_black.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/latosemibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}

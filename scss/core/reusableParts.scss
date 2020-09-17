@@ -1,0 +1,25 @@
+.university-card-block {
+    display: none !important;
+    width: 1170px;
+    height: 291px;
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 22px $box-shadow-light;
+    transition: box-shadow 0.3s;
+    @media (max-width: 540px) {
+        flex-direction: column;
+    }
+    &:hover {
+        box-shadow: 0px 4px 34px $box-shadow-dark;
+    }
+    @media (max-width: 1210px) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.university-card-block--active {
+    display: flex !important;
+}

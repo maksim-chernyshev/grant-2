@@ -1,0 +1,10 @@
+.search-results {
+    margin-top: 64px;
+    &__show-more {
+        margin-top: 56px;
+        margin-bottom: 74px;
+        @include blue-bordered-btn(100%);
+        height: 56px;
+    }
+}
+

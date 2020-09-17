@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <title>Грант на вузы</title>
+</head>
+<body>
+    <div class="form-window">
+	    <div class="form-header">
+          <a href="#" class="form-link form-link-active form-link-active-hide" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти в систему</a>
+          <a href="#" class="form-link form-link-active form-link-active-small" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти</a>
+          <a href="#" class="form-link" onclick="switchFormState('none', 'flex', 'none', 'flex', 'none')">Зарегестрироваться</a>
+	        <button type="button" class="form-close" onclick="showMainForm('none')">
+                <svg class="form-close-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                	<path d="M27 5L5 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+                	<path d="M5 5L27 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+	            </button>
+            </div>
+            <div class="form-body">
+                <div class="form-socials">
+                <h5 class="form-socials-title">С помощью социальной сети</h5>
+                <div class="form-socials-list">
+                	<a href="https://www.vk.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/vk.png" alt="Вконтакте" class="form-socials-icon">
+                	</a>
+                	<a href="https://www.google.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/gmail.png" alt="Gmail" class="form-socials-icon">
+                	</a>
+                	<a href="https://www.facebook.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/facebook.png" alt="Facebook" class="form-socials-icon">
+                	</a>
+                </div>
+            </div>
+            <form action="" class="form-login">
+            	<h5 class="form-data-title">Или ввести свои данные</h5>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<input type="password" class="form-input" placeholder="Пароль" required>
+            	<button type="submit" class="form-login-button">Войти</button>
+            	<button type="button" class="form-remind-password-button" onclick="switchFormState('none', 'none', 'flex', 'none', 'none')">Напомнить пароль</button>
+            </form>
+            <form action="" class="form-signup">
+            	<h5 class="form-data-title">Или ввести свои данные</h5>
+            	<label for="direction" class="form-label">
+            	    <input type="text" id="direction" class="form-input" placeholder="Направление" required>
+            	    <span class="form-prompt">Например: Экономика</span>
+            	</label>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<input type="password" class="form-input" placeholder="Пароль" required>
+            	<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+            	<button type="submit" class="form-login-button">Зарегестрироваться</button>
+            </form>
+            <form action="" class="form-forgot-pass">
+            	<h4 class="form-title">Введите Email<br> для востановления пароля</h4>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<button type="submit" class="form-login-button" onclick="switchFormState('none', 'none', 'none', 'none', 'flex')">Восстановить</button>
+            </form>
+            <div class="form-message">
+            	<img src="./img/form/message-icon.png" alt="message" class="form-message-icon">
+            	<h4 class="form-title">
+            	    Письмо отправлено, проверьте пожалуйста почту
+            	</h4>
+            </div>
+	    </div>
+    </div>
+
+    <div class="form-fade-background" onclick="showMainForm('none')"></div>
+    <header class="prize-header">
+        <div class="prize-header__images">
+            <div class="prize-header__students-image-block">
+                <div class="prize-header__overlay"></div>
+            </div>
+            <div class="container">
+                <img src="./img/prize-page/prize-bg.png" alt="фон" class="prize-header__main-bg">
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <nav class="mobile-nav__navigation">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a href="prize-page.html" class="mobile-nav__link">Призы</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="select-university.html" class="mobile-nav__link">Список вузов</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="settings.html" class="mobile-nav__link">Настройки</a>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--close">
+                        <a href="#" class="mobile-nav__link">Выйти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="header-top__logo"><img src="img//prize-page/prize-logo.png" alt="logo"></a>
+                <a href="#" class="header-top__button" onclick="showMainForm('flex')">Войти</a>
+                <div class="menu-toggle" onclick="disableScrollY()">
+                    <div class="menu-toggle__part"></div>
+                    <div class="menu-toggle__part"></div>
+                    <div class="menu-toggle__part"></div>
+                </div>
+            </div>
+            <div class="prize-header__content">
+                <div class="prize-header__title-wrapper">
+                    <h1 class="prize-header__title">
+                        Твой приз от
+                    </h1>
+                    <h1 class="prize-header__title--small">
+                        Приз от
+                    </h1>
+                    <img src="./img/prize-page/sponsor-logo.png" alt="лого" class="prize-header__sponsor-logo">
+                    <img src="./img/prize-page/sponsor-logo-small.png" alt="лого" class="prize-header__sponsor-logo--small">
+                </div>
+                <form action="" class="prize-header-form">
+                    <div class="prize-header-form__inputs-wrapper">
+                        <input type="email" class="prize-header-form__input" placeholder="Email" required>
+                        <input type="text" name="tel" class="prize-header-form__input prize-header-form__input--number" placeholder="7(___)__-__-__">
+                    </div>
+                    <button class="prize-header-form__button">Зарегестрироваться</button>
+                </form>
+            </div>
+            <div class="prize-header__buttons-wrapper">
+                <a href="prize-page.html" class="prize-header__link">
+                    <button class="prize-header__button prize-header__button--active">
+                        <svg width="22" height="22" viewBox="0 0 22 22" class="prize-header__button-icon" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.31522 20.4286C1.31522 21.2978 1.90296 22 2.63043 22H9.20652V14.1429H1.31522V20.4286ZM11.837 22H18.413C19.1405 22 19.7283 21.2978 19.7283 20.4286V14.1429H11.837V22ZM19.7283 6.28571H17.9979C18.2528 5.69152 18.413 5.03348 18.413 4.32143C18.413 1.93973 16.7896 0 14.7962 0C13.0864 0 11.9808 1.04598 10.5628 3.35402C9.14487 1.04598 8.03927 0 6.32948 0C4.33611 0 2.71264 1.93973 2.71264 4.32143C2.71264 5.03348 2.86882 5.69152 3.12775 6.28571H1.31522C0.587738 6.28571 0 6.98795 0 7.85714V11.7857C0 12.2179 0.295924 12.5714 0.657609 12.5714H20.3859C20.7476 12.5714 21.0435 12.2179 21.0435 11.7857V7.85714C21.0435 6.98795 20.4557 6.28571 19.7283 6.28571ZM6.32537 6.28571C5.41705 6.28571 4.68135 5.4067 4.68135 4.32143C4.68135 3.23616 5.41705 2.35714 6.32537 2.35714C7.14327 2.35714 7.74745 2.5192 9.86413 6.28571H6.32537ZM14.7962 6.28571H11.2574C13.37 2.52902 13.9577 2.35714 14.7962 2.35714C15.7045 2.35714 16.4402 3.23616 16.4402 4.32143C16.4402 5.4067 15.7045 6.28571 14.7962 6.28571Z" />
+                        </svg>
+                        призы
+                    </button>
+                </a>
+                <a href="select-university.html" class="prize-header__link">
+                    <button class="prize-header__button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="prize-header__button-icon" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 18.9406H21.25V8.94064H22.5H23.75V6.44064C23.75 5.94564 23.46 5.49814 23.0075 5.29814L11.2175 0.0593872L0.69125 5.32189C0.2675 5.53314 0 5.96689 0 6.44064V8.94064H1.25H2.5V18.9406H0V23.9406H23.75V18.9406ZM17.5 8.94064V18.9406H13.75V8.94064H17.5ZM6.25 8.94064H10V18.9406H6.25V8.94064Z"  />
+                        </svg>
+                        вуз
+                    </button>
+                </a>
+                <a href="settings.html" class="prize-header__link prize-header__link--last">
+                    <button class="prize-header__button">
+                        <svg width="23" height="24" viewBox="0 0 23 24" class="prize-header__button-icon" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.8878 14.7829L19.8987 13.6343C20.0994 12.551 20.0994 11.4397 19.8987 10.3564L21.8878 9.20772C22.1166 9.07698 22.2193 8.80616 22.1446 8.55401C21.6263 6.89173 20.7438 5.3882 19.5905 4.13682C19.413 3.94538 19.1236 3.89868 18.8994 4.02942L16.9103 5.17808C16.0745 4.459 15.1126 3.90335 14.0713 3.53914V1.2465C14.0713 0.985016 13.8892 0.756219 13.6324 0.700187C11.9188 0.317301 10.1631 0.335979 8.5335 0.700187C8.27668 0.756219 8.09458 0.985016 8.09458 1.2465V3.54381C7.05799 3.91269 6.0961 4.46834 5.25562 5.18275L3.27116 4.03409C3.04236 3.90335 2.75753 3.94538 2.58009 4.14149C1.42677 5.3882 0.544263 6.89173 0.0259671 8.55868C-0.0534116 8.81083 0.0539831 9.08165 0.282781 9.21239L2.27192 10.361C2.07114 11.4443 2.07114 12.5556 2.27192 13.6389L0.282781 14.7876C0.0539831 14.9183 -0.0487423 15.1891 0.0259671 15.4413C0.544263 17.1036 1.42677 18.6071 2.58009 19.8585C2.75753 20.0499 3.04703 20.0966 3.27116 19.9659L5.26029 18.8172C6.0961 19.5363 7.05799 20.0919 8.09925 20.4562V22.7535C8.09925 23.0149 8.28135 23.2437 8.53817 23.2998C10.2518 23.6827 12.0075 23.664 13.6371 23.2998C13.8939 23.2437 14.076 23.0149 14.076 22.7535V20.4562C15.1126 20.0873 16.0745 19.5316 16.915 18.8172L18.9041 19.9659C19.1329 20.0966 19.4177 20.0546 19.5952 19.8585C20.7485 18.6118 21.631 17.1082 22.1493 15.4413C22.2193 15.1845 22.1166 14.9136 21.8878 14.7829ZM11.083 15.7308C9.02378 15.7308 7.34749 14.0545 7.34749 11.9953C7.34749 9.93614 9.02378 8.25984 11.083 8.25984C13.1421 8.25984 14.8184 9.93614 14.8184 11.9953C14.8184 14.0545 13.1421 15.7308 11.083 15.7308Z" />
+                        </svg>
+                        настройки
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="prize-main">
+        <div class="container">
+            <section class="prize-cards">
+                <div class="prize-cards__wrapper">
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                    <article class="prize-card">
+                        <img src="./img/prize-page/author-logo.png" alt="спонсор" class="prize-card__logo">
+                        <p class="prize-card__description">
+                            От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                        </p>
+                        <button class="prize-card__button">Получить</button>
+                    </article>
+                </div>
+                <button type="button" class="prize-cards__show-more">Показать еще</button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <nav class="footer-navigation">
+                        <ul class="footer-navigation__list">
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link" onclick="showUniversitiesForm()">
+                                    Регистрация в программе
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Правила и сроки проведения розыгрыша
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__icon-box">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer-copyrights">
+                        <a href="#" class="footer-copyrights__link">
+                            <img src="./img/footer/footer-logo.svg" alt="" class="footer-copyrights__logo">
+                        </a>
+                        <p class="footer-copyrights__text">
+                            © 2019-2020 г. Все права защищены ООО «ИТ Сервис» ОГРН 1187847205424
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="footer-copyrights__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer-copyrights__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='js/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js'></script>
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src='js/mobileNav.js'></script>
+    <script src='js/showMoreBtn.js'></script>
+    <script src='js/phoneMask.js'></script>
+    <script src='js/horizontalScroll.js'></script>
+	<script src='js/script.js'></script>
+</body>
+</html>

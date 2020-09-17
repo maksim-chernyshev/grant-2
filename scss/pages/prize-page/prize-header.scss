@@ -1,0 +1,373 @@
+@import "../../utils";
+@import "../../animations";
+
+.prize-header {
+    min-height: 643px;
+    height: fit-content;
+    padding: 45px 0 20px;
+    background-color: rgba(233, 240, 255, 1);
+    @media (max-width: 1160px) {
+        padding: 45px 0;
+    }
+    @media (max-width: 500px) {
+        padding: 15px 0 20px;
+    }
+    .header-top__button {
+        @media (max-width: 500px) {
+            display: none;
+            min-height: 496px;
+        }
+    }
+
+    // .menu-toggle {
+    //     display: none;
+    //     height: 20px;
+    //     cursor: pointer;
+    //     &__part {
+    //     width: 28px;
+    //     height: 4px;
+    //     background-color: #fff;
+    //     }
+    //     @media (max-width: 500px) {
+    //         @include flex-style(flex, column, space-between);
+    //     }
+    // }
+    .menu-toggle {
+        z-index: 2;
+        &__part {
+            background: #fff;
+        }
+        .menu-toggle__part {
+            transform-origin: left center;
+            transition: transform 0.3s ease-in;
+        }
+    }
+    .menu-toggle--close {
+        height: 24px;
+        .menu-toggle__part {
+            background: $blue;
+        }
+        .menu-toggle__part:nth-child(2) {
+            opacity: 0;
+          }
+          .menu-toggle__part:nth-child(1) {
+            transform: rotate(45deg);
+        }
+        .menu-toggle__part:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+    }
+
+    &__images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 643px;
+        overflow: hidden;
+        @media (max-width: 1250px){
+            background: linear-gradient(180deg, #FFC000 0%, #EF1717 100%);
+            top: -190px;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+        }
+        @media (max-width: 765px) {
+            top: -100px;
+        }
+        @media (max-width: 500px) {
+            min-height: 496px;
+            background: url("../img/prize-page/students-small.jpg") no-repeat center;
+            top: 0;
+            background-size: cover;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+    }
+    &__students-image-block {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 630px;
+        height: 100%;
+        background: url("../img/prize-page/students.png") no-repeat;
+        background-position: right center;
+        background-size: cover;
+        border-left: 20px solid #e9f0ff;
+        @media (max-width: 1250px) {
+            background: transparent;
+            z-index: -1;
+        }
+        @media (max-width: 500px) {
+            z-index: 0;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(rgba(232, 240, 254, 0.6) 0%, rgba(232, 240, 254, 0.8) 50%, rgba(232, 240, 254, 1) 80%);
+        @media (max-width: 500px) {
+            top: 0;
+            left: 0;
+            background: linear-gradient(90.53deg, rgba(255, 192, 0, 0.8) 44.4%, rgba(239, 23, 23, 0.7) 99.27%);
+        }
+    }
+    &__main-bg {
+        position: absolute;
+        top: 0;
+        left: -350px;
+        @media (max-width: 1250px) {
+            display: none;
+        }
+    }
+    .header-top__button {
+        @include blue-bordered-btn(150px)
+    }
+    .container {
+        height: 100%;
+    }
+    &__content {
+        margin-top: 44px;
+        margin-bottom: 87px;
+        @include flex-style(flex, column);
+        animation: fadeIn 1.5s;
+        @media (max-width: 500px) {
+            margin-bottom: 52px;
+        }
+        @media (max-width: 350px) {
+            margin-bottom: 15px; 
+        }
+        
+    }
+    &__title-wrapper {
+        @include flex-style(flex);
+        margin-bottom: 44px;
+        @media (max-width: 765px) {
+            @include flex-style(flex, row, flex-start, center);
+        }
+    }
+    &__title {
+        margin-right: 34px;
+        @include text-style(700, 44px, 127%, #fff, uppercase);
+        @media (max-width: 765px) {
+            display: none;
+        }
+    }
+    &__title--small {
+        display: none;
+        @media (max-width: 765px) {
+            display: block;
+            margin-right: 10px;
+            @include text-style(700, 32px, 125%, #fff, none);
+        }
+    }
+    &__sponsor-logo {
+        @media (max-width: 765px) {
+            display: none;
+        } 
+    }
+    &__sponsor-logo--small {
+        display: none;
+        @media (max-width: 765px) {
+            display: block;
+        } 
+    }
+    &__buttons-wrapper {
+        @include flex-style(flex);
+        max-height: 100px;
+        padding: 40px 0;
+        margin: 0 -20px;
+        @media (max-width: 680px) {
+            overflow-y: scroll;
+            max-height: fit-content;
+        }
+    }
+    &__button {
+        @include flex-style(flex, row, center, center);
+        padding: 16px 36px;
+        @include text-style(700, 20px, 120%, $blue, uppercase);
+        background: transparent;
+        box-shadow: 0px 4px 34px $box-shadow-secondary;
+        border-radius: 35px;
+        transition: 0.3s;
+        &:hover {
+            color: #fff;
+            background: $blue;
+            box-shadow: 0px 4px 34px $box-shadow-dark;
+        }
+        &:hover .prize-header__button-icon {
+            fill: #fff;
+        }
+        &--active {
+            color: #fff;
+            background: $blue;
+            box-shadow: 0px 4px 34px $box-shadow-dark;
+            .prize-header__button-icon {
+                fill: #fff;
+            }
+        }
+    }
+    &__link {
+        margin-right: 38px;
+        margin-left: 20px;
+        &--last {
+            padding-right: 20px;
+        }
+        @media (max-width: 680px) {
+            margin: 0 18px;
+        }
+    }
+    &__button-icon {
+        margin-right: 10px;
+        fill: $blue;
+    }
+    &__form-search-wrapper {
+        display: flex;
+        height: 56px;
+        margin-bottom: 44px;
+        @media (max-width: 1160px) {
+            display: none;
+        }
+        @media (max-width: 530px) {
+            width: 100%; 
+        }
+        &--small {
+            display: none;
+            position: relative;
+            margin-bottom: 0;
+            margin-top: 44px;
+            @media (max-width: 1160px) {
+                display: block;
+            }
+            @media (max-width: 680px) {
+                margin-top: 0;
+            }
+        }
+    }
+    &__input {
+        height: 100%;
+        width: 400px;
+        padding: 13px 18px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 34px $box-shadow-secondary;
+        border-top-left-radius: 55px;
+        border-bottom-left-radius: 55px;
+        @media (max-width: 530px) {
+            width: 100%; 
+        }
+        &::placeholder {
+            @include text-style(500, 18px, 135%, $secondary-text-light);
+        }
+        &--small {
+            width: 100%;
+            border-radius: 55px;
+        }
+    }
+    &__input-button {
+        position: relative;
+        @include flex-style(flex, row, center, center);
+        height: 100%;
+        width: 70px;
+        background: $blue;
+        border-top-right-radius: 55px;
+        border-bottom-right-radius: 55px;
+        @media (max-width: 375px) {
+            width: 64px;
+        }
+    }
+    &__input-button-2 {
+        position: absolute;
+        top: 52%;
+        right: 21px;
+        transform: translateY(-50%);
+
+    }
+}
+.prize-header__buttons-wrapper {
+    &::-webkit-scrollbar {
+            display: none;
+        }
+}
+
+.prize-header-form {
+    &__inputs-wrapper {
+        margin-bottom: 36px;
+        @media (max-width: 765px) {
+            width: 100%;
+            @include flex-style(flex, column, center, center);
+        }
+    }
+    &__input {
+        height: 56px;
+        width: 290px;
+        padding: 13px 16px;
+        border-radius: 55px;
+        &::placeholder {
+            @include text-style(500, 18px, 135%, $secondary-text-light)
+        }
+        &--number::-webkit-outer-spin-button,
+        &--number::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        @media (max-width: 765px) {
+            width: 100%;
+        }  
+    }
+    &__input:first-child {
+        margin-right: 43px;
+        @media (max-width: 765px) {
+            margin-right: 0;
+            margin-bottom: 36px;
+        }
+    }
+    &__button {
+        height: 56px;
+        width: 606px;
+        background: $blue;
+        border-radius: 35px;
+        @include text-style(700, 18px, 135%, #fff, uppercase);
+        transition: 0.3s;
+        @media (max-width: 1250px) {
+            width: 628px;
+        }
+        @media (max-width: 765px) {
+            width: 100%;
+        }
+        &:hover {
+            background: #fff;
+            color: $blue;
+        }
+    }
+    @media (max-width: 765px) {
+        @include flex-style(flex, column, center, center);
+    }
+}
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    right: -1999px;
+    height: 100vh;
+    width: 65%;
+    padding: 29px 78px 29px 24px;
+    text-align: right;
+    background: #fff;
+    box-shadow: 0px 4px 34px $box-shadow-dark;
+    z-index: 1;
+    transition: 0.4s;
+    @media (max-width: 380px) {
+        width: 75%;
+        padding-left: 12px;
+    }
+    &--show {
+        right: 0;
+    }
+    &__link {
+        margin-bottom: 33px;
+        @include text-style(700, 18px, 135%, $blue, uppercase);
+    }
+}
+

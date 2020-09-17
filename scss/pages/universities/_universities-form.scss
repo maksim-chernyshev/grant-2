@@ -1,0 +1,196 @@
+@import "../../utils";
+
+.universities-signup {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $blue;
+    color: white;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        padding-top: 59px;
+        padding-bottom: 78px;
+        border-bottom: 2px solid $main-bg-light;
+        @media (max-width: 1200px) {
+            max-width: 900px;
+            margin: auto;
+        }
+        @media (max-width: 540px) {
+            padding-top: 34px;
+            padding-bottom: 70px;
+            border-bottom: none;
+        }
+        @media (max-width: 460px) {
+            padding-bottom: 30px;
+        }
+    }
+    &__body {
+        flex: 1;
+        @include flex-style(flex, column);
+    }
+    &__picture-block {
+        flex: 1;
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+    &__image {
+        position: absolute;
+        bottom: -33px;
+        right: -10px;
+    }
+}
+
+.universities-signup-header {
+    margin-bottom: 37px;
+    &__title {
+        margin-bottom: 12px;
+        text-align: left;
+        @include text-style(700, 32px, 125%, $orange, uppercase);
+        @media (max-width: 350px) {
+            font-size: 28px;
+        }
+    }
+    &__text {
+        @include text-style(600, 28px, 143%);
+        @media (max-width: 540px) {
+            @include text-style(700, 18px, 135%);
+        }
+    }
+}
+
+.universities-signup-socials {
+    display: flex;
+    margin-bottom: 35px;
+    @media (max-width: 540px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__title {
+        width: 170px;
+        margin-right: 36px;
+        @include text-style(600, 18px, 135%, $main-bg-light);
+        text-align: left;
+        @media (max-width: 540px) {
+            width: 100%;
+            margin: 0 0 20px;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__link:not(:last-child) {
+        margin-right: 42px;
+    }
+    &__link {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        line-height: 100%;
+        text-align: center;
+        background: #fff;
+        border-radius: 50%;
+        &:hover {
+            box-shadow: 0px 0px 20px -5px $main-bg-light;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.universities-form {
+    &__title-wrapper {
+        @include flex-style(flex, row, space-between, center);
+        width: 100%;
+        margin-bottom: 36px;
+    }
+    &__title {
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        margin-right: 26px;
+        text-align: left;
+        @include text-style(600, 18px, 135%, $main-bg-light);
+    }
+    &__horizontal-line {
+        position: relative;
+        top: 3px;
+        height: 2px;
+        width: 100%;
+        background: $main-bg-light;
+    }
+    &__wrapper {
+        display: flex;
+        @media (max-width: 580px) {
+            flex-direction: column;
+        }
+    }
+    &__inner {
+        @include flex-style(flex, column);
+        flex: 1;
+        @media (max-width: 580px) {
+           width: 100%;
+        }
+    }
+    &__inner:first-child {
+        @media (max-width: 1200px) {
+            margin-right: 15px;
+        }
+        @media (max-width: 580px) {
+            width: 100%;
+            margin-right: 0;
+         }
+    }
+    &__inner:last-child {
+        align-items: flex-end;
+    }
+    &__label {
+        position: relative;
+    }
+    &__prompt {
+        position: absolute;
+        bottom: 17px;
+        left: 18px;
+        @include text-style(500, 18px, 135%, #fff);
+        @media (max-width: 580px) {
+            bottom: 7px;
+        }
+    }
+    &__input {
+        height: 56px;
+        width: 269px;
+        padding: 13px 18px;
+        border-radius: 55px;
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+        &::placeholder {
+            font-size: 18px;
+            line-height: 135%;
+            color: $secondary-text-light;
+        }
+    }
+    &__input:first-child {
+        margin-bottom: 48px;
+        @media (max-width: 580px) {
+            margin-bottom: 36px;
+        }
+    }
+    &__input:nth-child(2) {
+        margin-bottom: 36px;
+    }
+    &__button {
+        max-width: 269px;
+        @include yellow-btn;
+        @media (max-width: 1200px) {
+            max-width: 100%
+        }
+    }
+}

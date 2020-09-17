@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <title>Грант на вуз</title>
+</head>
+<body>
+    <div class="form-window">
+	    <div class="form-header">
+          <a href="#" class="form-link form-link-active form-link-active-hide" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти в систему</a>
+          <a href="#" class="form-link form-link-active form-link-active-small" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти</a>
+	        <a href="#" class="form-link" onclick="switchFormState('none', 'flex', 'none', 'flex', 'none')">Зарегестрироваться</a>
+	        <button type="button" class="form-close" onclick="showMainForm('none')">
+                <svg class="form-close-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                	<path d="M27 5L5 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+                	<path d="M5 5L27 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+	            </button>
+            </div>
+            <div class="form-body">
+                <div class="form-socials">
+                <h5 class="form-socials-title">С помощью социальной сети</h5>
+                <div class="form-socials-list">
+                	<a href="https://www.vk.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/vk.png" alt="Вконтакте" class="form-socials-icon">
+                	</a>
+                	<a href="https://www.google.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/gmail.png" alt="Gmail" class="form-socials-icon">
+                	</a>
+                	<a href="https://www.facebook.com" target="_blank" class="form-socials-link">
+                	    <img src="./img/form/facebook.png" alt="Facebook" class="form-socials-icon">
+                	</a>
+                </div>
+            </div>
+            <form action="" class="form-login">
+            	<h5 class="form-data-title">Или ввести свои данные</h5>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<input type="password" class="form-input" placeholder="Пароль" required>
+            	<button type="submit" class="form-login-button">Войти</button>
+            	<button type="button" class="form-remind-password-button" onclick="switchFormState('none', 'none', 'flex', 'none', 'none')">Напомнить пароль</button>
+            </form>
+            <form action="" class="form-signup">
+            	<h5 class="form-data-title">Или ввести свои данные</h5>
+            	<label for="direction" class="form-label">
+            	    <input type="text" id="direction" class="form-input" placeholder="Направление" required>
+            	    <span class="form-prompt">Например: Экономика</span>
+            	</label>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<input type="password" class="form-input" placeholder="Пароль" required>
+            	<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+            	<button type="submit" class="form-login-button">Зарегестрироваться</button>
+            </form>
+            <form action="" class="form-forgot-pass">
+            	<h4 class="form-title">Введите Email<br> для востановления пароля</h4>
+            	<input type="email" class="form-input" placeholder="Email" required>
+            	<button type="submit" class="form-login-button" onclick="switchFormState('none', 'none', 'none', 'none', 'flex')">Восстановить</button>
+            </form>
+            <div class="form-message">
+            	<img src="./img/form/message-icon.png" alt="message" class="form-message-icon">
+            	<h4 class="form-title">
+            	    Письмо отправлено, проверьте пожалуйста почту
+            	</h4>
+            </div>
+	    </div>
+    </div>
+
+    <div class="form-fade-background" onclick="showMainForm('none')"></div>
+    
+    <header class="universities-header">
+	    <div class="container">
+			<div class="header-top">
+				<a href="index.html" class="header-top__logo"><img src="img/main/logo.svg" alt="logo"></a>
+                <a href="#" class="header-top__button" onclick="showMainForm('flex')">Войти</a>
+            </div>
+            <div class="universities-header__content">
+                <h1 class="universities-header__title">вузы в твоем городе</h1>
+                <p class="universities-header__text-result">Найдено 100500 ВУЗов по твоему направлению.</p>
+                <p class="universities-header__text-signup">Зарегистрируйся, чтобы увидеть их все.</p> 
+                <button class="universities-header__button" onclick="showMainForm('flex')">Регистрация</button> 
+            </div>
+		</div>
+    </header>
+    <main class="main-universities">
+        <section class="universities">
+            <div class="container">
+                <article class="university-card-block university-card-block--active">
+                    <div class="university-info">
+                        <div class="university-info__block-1">
+                            <img src="./img/universities/uni-logo.png" alt="логотип-МГУ" class="university-info__logo">
+                            <div class="university-info__header">
+                                <h4 class="university-info__name">мгу</h4>
+                                <p class="university-info__fullname">
+                                    Московского государственного университета имени М.В.Ломоносова и его...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="university-info__block-2">
+                            <a href="https://www.msu.ru/" target="_blank" class="university-info__link">mgu.ru</a>
+                            <a href="tel: +8900436040" class="university-info__link">8 900 436-0-40</a>
+                        </div>
+                        <div class="university-info__block-3">
+                            <a 
+                                href="https://www.google.com/maps/place/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%9C.%D0%92.%D0%9B%D0%BE%D0%BC%D0%BE%D0%BD%D0%BE%D1%81%D0%BE%D0%B2%D0%B0/@55.7034609,37.5277743,16.5z/data=!4m8!1m2!2m1!1z0L_RgC3RgiDQkNC70LXQutGB0LDQvdC00YDQvtCy0YHQutC-0Lkg0YTQtdGA0LzRiyDQl9C-0Lgg0LzQs9GD!3m4!1s0x0:0xfae7174706dad052!8m2!3d55.7039352!4d37.5286692" 
+                                class="university-info__address"
+                                target="_blank"
+                            >
+                                пр-т Александровской фермы Зои Космодемьянской и брата ее-123
+                            </a>
+                        </div>
+                    </div>
+                    <div class="university-details">
+                        <div class="university-details__wrapper">
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/lovely-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 648</h4>
+                                </div>
+                                <p class="university-details__text">Бюджетных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/angry-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 810</h4>
+                                </div>
+                                <p class="university-details__text">Платных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/dormitory-bed.png" class="university-details__icon">
+                                    <img src="./img/universities/checked-icon.png">
+                                </div>
+                                <p class="university-details__text">Общежитие</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/student-hat.png" class="university-details__icon">
+                                    <h4 class="university-details__title">90</h4>
+                                </div>
+                                <p class="university-details__text">Средний балл ЕГЭ</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/coins.png" class="university-details__icon">
+                                    <h4 class="university-details__title">999 810 &#x20BD;</h4>
+                                </div>
+                                <p class="university-details__text">~Стоимость обучения</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/tower.png" class="university-details__icon">
+                                    <h4 class="university-details__title">1755</h4>
+                                </div>
+                                <p class="university-details__text">Год основания</p>
+                            </div>
+                        </div>
+                        <a href="#" class="university-details__look-majors">Смотреть специальности</a>
+                    </div>
+                    <div class="university-rating">
+                        <div class="university-rating__number-sm">
+                            <img src="./img/universities/star.svg" alt="звезда" class="star">
+                            4.9
+                        </div>
+                        <div class="university-rating__wrapper">
+                            <h4 class="university-rating__number">4.0</h4>
+                            <img src="./img/universities/question-mark.png" class="university-rating__icon">
+                        </div>
+                        <div class="stars stars--4">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <a href="university-page.html" class="university-rating__link">
+                            Подробнее
+                        </a>
+                    </div> 
+                </article>
+                <article class="university-card-block university-card-block--active">
+                    <div class="university-info">
+                        <div class="university-info__block-1">
+                            <img src="./img/universities/uni-logo.png" alt="логотип-МГУ" class="university-info__logo">
+                            <div class="university-info__header">
+                                <h4 class="university-info__name">мгу</h4>
+                                <p class="university-info__fullname">
+                                    Московского государственного университета имени М.В.Ломоносова и его...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="university-info__block-2">
+                            <a href="https://www.msu.ru/" target="_blank" class="university-info__link">mgu.ru</a>
+                            <a href="tel: +8900436040" class="university-info__link">8 900 436-0-40</a>
+                        </div>
+                        <div class="university-info__block-3">
+                            <a 
+                                href="https://www.google.com/maps/place/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%9C.%D0%92.%D0%9B%D0%BE%D0%BC%D0%BE%D0%BD%D0%BE%D1%81%D0%BE%D0%B2%D0%B0/@55.7034609,37.5277743,16.5z/data=!4m8!1m2!2m1!1z0L_RgC3RgiDQkNC70LXQutGB0LDQvdC00YDQvtCy0YHQutC-0Lkg0YTQtdGA0LzRiyDQl9C-0Lgg0LzQs9GD!3m4!1s0x0:0xfae7174706dad052!8m2!3d55.7039352!4d37.5286692" 
+                                class="university-info__address"
+                                target="_blank"
+                            >
+                                пр-т Александровской фермы Зои Космодемьянской и брата ее-123
+                            </a>
+                        </div>
+                    </div>
+                    <div class="university-details">
+                        <div class="university-details__wrapper">
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/lovely-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 648</h4>
+                                </div>
+                                <p class="university-details__text">Бюджетных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/angry-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 810</h4>
+                                </div>
+                                <p class="university-details__text">Платных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/dormitory-bed.png" class="university-details__icon">
+                                    <img src="./img/universities/checked-icon.png">
+                                </div>
+                                <p class="university-details__text">Общежитие</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/student-hat.png" class="university-details__icon">
+                                    <h4 class="university-details__title">90</h4>
+                                </div>
+                                <p class="university-details__text">Средний балл ЕГЭ</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/coins.png" class="university-details__icon">
+                                    <h4 class="university-details__title">999 810 &#x20BD;</h4>
+                                </div>
+                                <p class="university-details__text">~Стоимость обучения</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/tower.png" class="university-details__icon">
+                                    <h4 class="university-details__title">1755</h4>
+                                </div>
+                                <p class="university-details__text">Год основания</p>
+                            </div>
+                        </div>
+                        <a href="#" class="university-details__look-majors">Смотреть специальности</a>
+                    </div>
+                    <div class="university-rating">
+                        <div class="university-rating__number-sm">
+                            <img src="./img/universities/star.svg" alt="звезда" class="star">
+                            4.9
+                        </div>
+                        <div class="university-rating__wrapper">
+                            <h4 class="university-rating__number">4.0</h4>
+                            <img src="./img/universities/question-mark.png" class="university-rating__icon">
+                        </div>
+                        <div class="stars stars--4">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <a href="university-page.html" class="university-rating__link">
+                            Подробнее
+                        </a>
+                    </div> 
+                </article>
+                <article class="university-card-block university-card-block--active">
+                    <div class="university-info">
+                        <div class="university-info__block-1">
+                            <img src="./img/universities/uni-logo.png" alt="логотип-МГУ" class="university-info__logo">
+                            <div class="university-info__header">
+                                <h4 class="university-info__name">мгу</h4>
+                                <p class="university-info__fullname">
+                                    Московского государственного университета имени М.В.Ломоносова и его...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="university-info__block-2">
+                            <a href="https://www.msu.ru/" target="_blank" class="university-info__link">mgu.ru</a>
+                            <a href="tel: +8900436040" class="university-info__link">8 900 436-0-40</a>
+                        </div>
+                        <div class="university-info__block-3">
+                            <a 
+                                href="https://www.google.com/maps/place/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%9C.%D0%92.%D0%9B%D0%BE%D0%BC%D0%BE%D0%BD%D0%BE%D1%81%D0%BE%D0%B2%D0%B0/@55.7034609,37.5277743,16.5z/data=!4m8!1m2!2m1!1z0L_RgC3RgiDQkNC70LXQutGB0LDQvdC00YDQvtCy0YHQutC-0Lkg0YTQtdGA0LzRiyDQl9C-0Lgg0LzQs9GD!3m4!1s0x0:0xfae7174706dad052!8m2!3d55.7039352!4d37.5286692" 
+                                class="university-info__address"
+                                target="_blank"
+                            >
+                                пр-т Александровской фермы Зои Космодемьянской и брата ее-123
+                            </a>
+                        </div>
+                    </div>
+                    <div class="university-details">
+                        <div class="university-details__wrapper">
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/lovely-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 648</h4>
+                                </div>
+                                <p class="university-details__text">Бюджетных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/angry-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 810</h4>
+                                </div>
+                                <p class="university-details__text">Платных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/dormitory-bed.png" class="university-details__icon">
+                                    <img src="./img/universities/checked-icon.png">
+                                </div>
+                                <p class="university-details__text">Общежитие</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/student-hat.png" class="university-details__icon">
+                                    <h4 class="university-details__title">90</h4>
+                                </div>
+                                <p class="university-details__text">Средний балл ЕГЭ</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/coins.png" class="university-details__icon">
+                                    <h4 class="university-details__title">999 810 &#x20BD;</h4>
+                                </div>
+                                <p class="university-details__text">~Стоимость обучения</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/tower.png" class="university-details__icon">
+                                    <h4 class="university-details__title">1755</h4>
+                                </div>
+                                <p class="university-details__text">Год основания</p>
+                            </div>
+                        </div>
+                        <a href="#" class="university-details__look-majors">Смотреть специальности</a>
+                    </div>
+                    <div class="university-rating">
+                        <div class="university-rating__number-sm">
+                            <img src="./img/universities/star.svg" alt="звезда" class="star">
+                            4.9
+                        </div>
+                        <div class="university-rating__wrapper">
+                            <h4 class="university-rating__number">4.0</h4>
+                            <img src="./img/universities/question-mark.png" class="university-rating__icon">
+                        </div>
+                        <div class="stars stars--4">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <a href="university-page.html" class="university-rating__link">
+                            Подробнее
+                        </a>
+                    </div> 
+                </article>
+                <article class="university-card-block university-card-block--active">
+                    <div class="university-info">
+                        <div class="university-info__block-1">
+                            <img src="./img/universities/uni-logo.png" alt="логотип-МГУ" class="university-info__logo">
+                            <div class="university-info__header">
+                                <h4 class="university-info__name">мгу</h4>
+                                <p class="university-info__fullname">
+                                    Московского государственного университета имени М.В.Ломоносова и его...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="university-info__block-2">
+                            <a href="https://www.msu.ru/" target="_blank" class="university-info__link">mgu.ru</a>
+                            <a href="tel: +8900436040" class="university-info__link">8 900 436-0-40</a>
+                        </div>
+                        <div class="university-info__block-3">
+                            <a 
+                                href="https://www.google.com/maps/place/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%9C.%D0%92.%D0%9B%D0%BE%D0%BC%D0%BE%D0%BD%D0%BE%D1%81%D0%BE%D0%B2%D0%B0/@55.7034609,37.5277743,16.5z/data=!4m8!1m2!2m1!1z0L_RgC3RgiDQkNC70LXQutGB0LDQvdC00YDQvtCy0YHQutC-0Lkg0YTQtdGA0LzRiyDQl9C-0Lgg0LzQs9GD!3m4!1s0x0:0xfae7174706dad052!8m2!3d55.7039352!4d37.5286692" 
+                                class="university-info__address"
+                                target="_blank"
+                            >
+                                пр-т Александровской фермы Зои Космодемьянской и брата ее-123
+                            </a>
+                        </div>
+                    </div>
+                    <div class="university-details">
+                        <div class="university-details__wrapper">
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/lovely-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 648</h4>
+                                </div>
+                                <p class="university-details__text">Бюджетных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/angry-face.png" class="university-details__icon">
+                                    <h4 class="university-details__title">30 810</h4>
+                                </div>
+                                <p class="university-details__text">Платных мест</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/dormitory-bed.png" class="university-details__icon">
+                                    <img src="./img/universities/checked-icon.png">
+                                </div>
+                                <p class="university-details__text">Общежитие</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/student-hat.png" class="university-details__icon">
+                                    <h4 class="university-details__title">90</h4>
+                                </div>
+                                <p class="university-details__text">Средний балл ЕГЭ</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/coins.png" class="university-details__icon">
+                                    <h4 class="university-details__title">999 810 &#x20BD;</h4>
+                                </div>
+                                <p class="university-details__text">~Стоимость обучения</p>
+                            </div>
+                            <div class="university-details__block">
+                                <div class="university-details__inner">
+                                    <img src="./img/universities/tower.png" class="university-details__icon">
+                                    <h4 class="university-details__title">1755</h4>
+                                </div>
+                                <p class="university-details__text">Год основания</p>
+                            </div>
+                        </div>
+                        <a href="#" class="university-details__look-majors">Смотреть специальности</a>
+                    </div>
+                    <div class="university-rating">
+                        <div class="university-rating__number-sm">
+                            <img src="./img/universities/star.svg" alt="звезда" class="star">
+                            4.9
+                        </div>
+                        <div class="university-rating__wrapper">
+                            <h4 class="university-rating__number">4.0</h4>
+                            <img src="./img/universities/question-mark.png" class="university-rating__icon">
+                        </div>
+                        <div class="stars stars--4">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <a href="university-page.html" class="university-rating__link">
+                            Подробнее
+                        </a>
+                    </div> 
+                </article>
+            </div>
+        </section>
+        <div class="universities-signup" id="universities-signup">
+            <div class="container">
+                <div class="universities-signup__wrapper">
+                    <div class="universities-signup__body">
+                        <div class="universities-signup-header">
+                            <h3 class="universities-signup-header__title">
+                                зарегистрируйся
+                            </h3>
+                            <p class="universities-signup-header__text">
+                                Чтобы увидеть полный список ВУЗов по направлению “Специальность” 
+                            </p>
+                        </div>
+                        <div class="universities-signup-socials">
+                            <h5 class="universities-signup-socials__title">
+                                С помощью социальной сети:
+                            </h5>
+                            <div class="universities-signup-socials__list">
+                                <a href="https://www.vk.com" target="_blank" class="universities-signup-socials__link">
+                                    <img src="./img/form/vk.png" alt="Вконтакте" class="universities-signup-socials__icon">
+                                </a>
+                                <a href="https://www.google.com" target="_blank" class="universities-signup-socials__link">
+                                    <img src="./img/form/gmail.png" alt="Gmail" class="universities-signup-socials__icon">
+                                </a>
+                                <a href="https://www.facebook.com" target="_blank" class="universities-signup-socials__link">
+                                    <img src="./img/form/facebook.png" alt="Facebook" class="universities-signup-socials__icon">
+                                </a>
+                            </div>
+                        </div>
+                        <form action="" class="universities-form">
+                            <div class="universities-form__title-wrapper">
+                                <h5 class="universities-form__title">Или введи данные:</h5>
+                                <div class="universities-form__horizontal-line"></div>
+                            </div>
+                            <div class="universities-form__wrapper">
+                                <div class="universities-form__inner">
+                                    <label for="" class="universities-form__label">
+                                        <input type="text" class="universities-form__input" placeholder="Направление" required>
+                                        <span class="universities-form__prompt">Например: Экономика</span>
+                                    </label>
+                                    <input type="email" class="universities-form__input" placeholder="Email" required>
+                                    <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+                                </div>
+                                <div class="universities-form__inner">
+                                    <input type="password" class="universities-form__input" placeholder="Пароль" required>
+                                    <input type="password" class="universities-form__input" placeholder="Повторите пароль" required>
+                                    <button type="submit" class="universities-form__button">
+                                        Зарегестрироваться
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="universities-signup__picture-block">
+                        <img src="./img/universities/form-boy.svg" alt="Удивленный парень" class="universities-signup__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <nav class="footer-navigation">
+                        <ul class="footer-navigation__list">
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link" onclick="showUniversitiesForm()">
+                                    Регистрация в программе
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Правила и сроки проведения розыгрыша
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__icon-box">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer-copyrights">
+                        <a href="#" class="footer-copyrights__link">
+                            <img src="./img/footer/footer-logo.svg" alt="" class="footer-copyrights__logo">
+                        </a>
+                        <p class="footer-copyrights__text">
+                            © 2019-2020 г. Все права защищены ООО «ИТ Сервис» ОГРН 1187847205424
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="footer-copyrights__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer-copyrights__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='js/jquery.min.js'></script>
+  <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src='js/script.js'></script>
+</body>
+</html>

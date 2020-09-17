@@ -1,0 +1,15 @@
+.blank-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $blue;
+    z-index: -1; 
+   &__wrapper{
+        height: 619px;;
+        border-bottom: 2px solid $main-bg-light;
+        @media (max-width: 550px) {
+          border-bottom: none;
+      }
+   }
+}

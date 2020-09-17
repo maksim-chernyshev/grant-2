@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Verstka</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+	<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+
+<body>
+	<div class="form-window">
+		<div class="form-header">
+			<a href="#" class="form-link form-link-active form-link-active-hide" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти в систему</a>
+			<a href="#" class="form-link form-link-active form-link-active-small" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти</a>
+			<a href="#" class="form-link" onclick="switchFormState('none', 'flex', 'none', 'flex', 'none')">Зарегестрироваться</a>
+			<button type="button" class="form-close" onclick="showMainForm('none')" >
+				<svg class="form-close-icon"  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M27 5L5 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+					<path d="M5 5L27 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+				</svg>
+			</button>
+		</div>
+		<div class="form-body">
+			<div class="form-socials">
+				<h5 class="form-socials-title">С помощью социальной сети</h5>
+				<div class="form-socials-list">
+					<a href="https://www.vk.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/vk.png" alt="Вконтакте" class="form-socials-icon">
+					</a>
+					<a href="https://www.google.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/gmail.png" alt="Gmail" class="form-socials-icon">
+					</a>
+					<a href="https://www.facebook.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/facebook.png" alt="Facebook" class="form-socials-icon">
+					</a>
+				</div>
+			</div>
+			<form action="" class="form-login">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<button type="submit" class="form-login-button">Войти</button>
+				<button type="button" class="form-remind-password-button" onclick="switchFormState('none', 'none', 'flex', 'none', 'none')">Напомнить пароль</button>
+			</form>
+			<form action="" class="form-signup">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<label for="direction" class="form-label">
+					<input type="text" id="direction" class="form-input" placeholder="Направление" required>
+					<span class="form-prompt">Например: Экономика</span>
+				</label>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+				<button type="submit" class="form-login-button">Зарегестрироваться</button>
+			</form>
+			<form action="" class="form-forgot-pass">
+				<h4 class="form-title">Введите Email<br> для востановления пароля</h4>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<button type="submit" class="form-login-button" onclick="switchFormState('none', 'none', 'none', 'none', 'flex')">Восстановить</button>
+			</form>
+			<div class="form-message">
+				<img src="./img/form/message-icon.png" alt="message" class="form-message-icon">
+				<h4 class="form-title">
+					Письмо отправлено, проверьте пожалуйста почту
+				</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-fade-background" onclick="showMainForm('none')"></div>
+
+	<header class="main-header">
+		<div class="wrap-bg">
+			<!-- <img src="img/main/bg-violet.svg" alt="" class="main-bg img-bg-violet "> -->
+			<!-- <img src="img/main/main-bg-build.png" alt="" class="main-bg img-bg-left-build"> -->
+			<img src="img/main/bg.png" alt="" class="main-bg img-bg-left-build">
+		</div>
+
+
+
+		<img src="img/main/mobile-build.svg" class='mobile-build-head' alt="mobile-build">
+		<div class="container">
+			<img src="img/main/main-bg-right.png" alt="" class="main-bg img-bg-right-build">
+			<div class="top">
+				<a href="index.html" class="logo"><img src="img/main/logo.svg" alt="logo"></a>
+				<a href="#" class="enter button-radius" onclick="showMainForm('flex')">Войти</a>
+			</div>
+
+
+			
+
+			<div class="content">
+				<div class="left-part half-width">
+					<h1>
+						Гранты в ВУЗы России
+					</h1>
+					<h3>
+						Выбирай направление, проверяй ВУЗ, получай грант до <span class='orange-note'>100 000 <span
+								class="rouble">7</span></span>
+					</h3>
+					<div class="wrap-hint">
+						<span class='span-hint'> Что ты хочешь изучать? Вводи направление и узнай лучшие ВУЗы.</span>
+
+
+						<div class="hint-lock">
+							<button class='button-hint'><img src="img/main/znak.png" alt="znak"></button>
+							<div class="hint">Подскажу тебе длиииииииинную подсказку</div>
+						</div>
+
+					</div>
+
+					<div class="search-wrap">
+						<form action="">
+							<span class="error-field">Неверно заполнено поле</span>
+							<input type="text" class="button-radius btn-big shadow naprav budget-field select-field"
+								placeholder="Направление" value="" onclick="dropDown()">
+							<div class="drop-down-budget drop-down">
+								<ul>
+									<li onclick="selectVal()" selected_value="Программирование1">Программирование1</li>
+									<li onclick="selectVal()" selected_value="Программирование2">Программирование2</li>
+									<li onclick="selectVal()" selected_value="Программирование3">Программирование3</li>
+									<li onclick="selectVal()" selected_value="Программирование4">Программирование4</li>
+									<li onclick="selectVal()" selected_value="Программирование5">Программирование5</li>
+									<li onclick="selectVal()" selected_value="Программирование6">Программирование6</li>
+									<li onclick="selectVal()" selected_value="Программирование7">Программирование7</li>
+									<li onclick="selectVal()" selected_value="Программирование8">Программирование8</li>
+
+								</ul>
+							</div>
+								<input 
+									type="submit" 
+									class="button-radius btn-big yellow-grad shadow"
+									value="узнать рейтинг вузов"
+									onclick="window.location='universities.html';"
+								>
+						</form>
+
+
+					</div>
+				</div>
+				<div class="right-part half-width">
+					<div class="swiper-container girl-slider">
+						<div class="swiper-wrapper ">
+							<div class="swiper-slide">
+								<img class='desk-girl' src="img/main/girl.png" alt="girl">
+								<img class='tablet-girl' src="img/main/girl_tablet.png" alt="girl">
+							</div>
+							<div class="swiper-slide">
+								<img class='desk-girl' src="img/main/girl.png" alt="girl">
+								<img class='tablet-girl' src="img/main/girl_tablet.png" alt="girl">
+							</div>
+							<div class="swiper-slide">
+								<img class='desk-girl' src="img/main/girl.png" alt="girl">
+								<img class='tablet-girl' src="img/main/girl_tablet.png" alt="girl">
+							</div>
+							<div class="swiper-slide">
+								<img class='desk-girl' src="img/main/girl.png" alt="girl">
+								<img class='tablet-girl' src="img/main/girl_tablet.png" alt="girl">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+
+	<main>
+
+		<section class="section-1 section">
+			<div class="title">
+				<div class="container">
+					<h3>Как получить грант</h3>
+				</div>
+			</div>
+			<div class="container">
+				<div class="wrap-step">
+
+					<div class="witharrow">
+						<div class="step">
+							<div class="img-wrap">
+								<img src="img/second-screen/napravlenie.svg" alt="1">
+							</div>
+							<div class="text-wrap">
+								Вводи направление, которое хочешь изучать. Ну или изучаешь
+							</div>
+						</div>
+
+						<svg width="123" height="37" viewBox="0 0 123 37" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M99.4563 36.2521C97.7542 36.543 96.1507 35.3243 95.8747 33.5299C95.5988 31.7356 96.7549 30.0452 98.457 29.7544L112.498 27.3548C77.7425 -0.343937 33.6555 -1.46581 5.41764 30.8053C4.2485 32.1414 2.27325 32.2254 1.00579 30.993C-0.261675 29.7605 -0.341387 27.6782 0.827745 26.3421C31.0901 -8.2426 77.4354 -7.14095 113.708 20.1264L110.652 9.55932C110.15 7.82056 111.079 5.98139 112.729 5.45143C114.378 4.92146 116.123 5.90139 116.626 7.64016L122.339 27.4016C122.653 27.8243 122.873 28.3339 122.96 28.9011C123.236 30.6954 122.08 32.3858 120.378 32.6767L99.4563 36.2521Z"
+								fill="#F04B17" />
+						</svg>
+					</div>
+
+					<div class="witharrow">
+						<div class="step">
+							<div class="img-wrap">
+								<img src="img/second-screen/registriruisa.svg" alt="1">
+							</div>
+							<div class="text-wrap">
+								Регистрируйся, чтобы получить доступ к статистике по всем ВУЗам
+							</div>
+						</div>
+
+						<svg width="123" height="37" viewBox="0 0 123 37" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M99.4558 0.36707C97.7537 0.0761815 96.1502 1.29495 95.8742 3.08926C95.5983 4.88357 96.7544 6.57396 98.4565 6.86485L112.497 9.26441C77.742 36.9631 33.655 38.085 5.41715 5.81394C4.24801 4.47782 2.27276 4.39379 1.0053 5.62625C-0.262164 6.85871 -0.341875 8.94096 0.827256 10.2771C31.0897 44.8618 77.435 43.7602 113.707 16.4929L110.652 27.0599C110.149 28.7986 111.079 30.6378 112.728 31.1678C114.378 31.6977 116.122 30.7178 116.625 28.979L122.339 9.21759C122.652 8.79494 122.872 8.28527 122.959 7.71809C123.235 5.92378 122.079 4.23339 120.377 3.9425L99.4558 0.36707Z"
+								fill="#FFC000" />
+						</svg>
+					</div>
+
+					<div class="step">
+						<div class="img-wrap">
+							<img src="img/second-screen/vibirai-img.svg" alt="1">
+						</div>
+						<div class="text-wrap">
+							Выбирай лучший ВУЗ, получай <a href='#'>крутые призы</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="prompt">
+
+					<div class="left-img">
+						<img src="img/money.png" alt="money">
+					</div>
+					<div class="center">
+						<p class='orange-note money'>100 000 <span class="rouble">7</span></p>
+						<p>на обучение может выйграть любой зарегистрировавшийся</p>
+					</div>
+					<a href="prize-page.html" class="button-radius orange-border button-link-border prompt-button">
+						Участвовать
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="section-2 section">
+			<div class="container">
+				<h3>Призы, гранты?</h3>
+				<h3>А можно поконкретней?</h3>
+				<div class="wrap-bg">
+					<div class="presents">
+						<div class="present">
+							<div class="present-top">
+								<div class="price">10 000 <span class="rouble">7</span></div>
+								<div class="price-desc">Эту сумму мы внесем на оплату твоей учебы</div>
+							</div>
+							<div class="present-bottom">
+								<div class="when">Разыгрываем каждую пятницу</div>
+								<a href="prize-page.html"
+									class="prompt-button blue button-link button-radius prompt-button">Участвовать</a>
+							</div>
+						</div>
+
+						<div class="present">
+							<div class="present-top">
+								<div class="price">30 000 <span class="rouble">7</span></div>
+								<div class="price-desc">Эту сумму мы внесем на оплату твоей учебы</div>
+							</div>
+							<div class="present-bottom">
+								<div class="when">Разыгрываем в конце месяца</div>
+								<a href="prize-page.html"
+									class="prompt-button blue button-link button-radius prompt-button">Участвовать</a>
+							</div>
+						</div>
+
+						<div class="present">
+							<div class="present-top">
+								<div class="price">100 000 <span class="rouble">7</span></div>
+								<div class="price-desc">Эту сумму мы внесем на оплату твоей учебы</div>
+							</div>
+							<div class="present-bottom">
+								<div class="when">Разыгрываем раз в полгода</div>
+								<a href="prize-page.html"
+									class="prompt-button blue button-link button-radius prompt-button">Участвовать</a>
+							</div>
+						</div>
+
+
+						<img src="img/second-screen/decor-bg-mob.svg" alt="decor" class="img-mob-bg">
+
+					</div>
+					<div class="left-decor"><img src="img/third-screen/decor-left.svg" alt="left"></div>
+					<div class="right-decor"><img src="img/third-screen/decor-right.svg" alt="right"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-3 section">
+			<div class="container">
+				<div class="wrap-slider">
+
+					<div class="swiper-container partner-slider">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide ">
+								<div class="left-part">
+									<img src="img/third-screen/tinkoff-logo.png" alt="tink">
+									<p>
+										От 300 рублей на консультацию с преподавателями сервиса Автор 24
+									</p>
+								</div>
+								<div class="right-part">
+									<a href="#" class="violet-border button-link-border button-radius">Получить</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="left-part">
+									<img src="img/third-screen/author-logo.png" alt="autor">
+									<p>
+										От 300 рублей на консультацию с преподавателями сервиса Автор 24
+									</p>
+								</div>
+								<div class="right-part">
+									<a href="#" class="violet-border button-link-border button-radius">Получить</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide ">
+								<div class="left-part">
+									<img src="img/third-screen/tinkoff-logo.png" alt="tink">
+									<p>
+										От 300 рублей на консультацию с преподавателями сервиса Автор 24
+									</p>
+								</div>
+								<div class="right-part">
+									<a href="#" class="violet-border button-link-border button-radius">Получить</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-button-prev swiper-button-prev1"></div>
+					<div class="swiper-button-next swiper-button-next1"></div>
+				</div>
+
+				<div class="button-wrap-more">
+					<a href="#" class="button-more">Показать больше</a>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="section-4 section">
+			<img class='stud-bg' src="img/fourth-screen/bg_students.png" alt="stud-bg">
+
+			<div class="container">
+				<h3>А если я не знаю на кого хочу учиться?</h3>
+				<p>–Не беда, мы составили для тебя простой тест. Пройди его и ты узнаешь кем можешь стать</p>
+
+				<div class="wrap-quiz">
+					<div class="ask">
+						<h3>Вопрос простой, но интересный.<br> Продолжение вопроса</h3>
+
+						<div class="wrap-answer">
+							<div class="answer button-radius">–Не беда, мы составили для тебя проссся </div>
+							<div class="answer button-radius">–Не беда, мы составили для тебя проссся </div>
+							<div class="answer button-radius">–Не беда, мы составили для тебя проссся </div>
+							<div class="answer button-radius">–Не беда, мы составили для тебя проссся </div>
+						</div>
+						<button class="button-radius yellow btn-big answer-button">Далее</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-5 section">
+			<div class="container">
+
+				<div class="wrap-winners">
+					<div class="winner">
+						<div class="img-wrap">
+							<img class="face-img" src="img/fifth-screen/Ellipse8.png" alt="photo">
+							<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+						</div>
+						<div class="desc-wrap">
+							<p class="name">
+								Вася Петров
+							</p>
+							<p class="city">
+								Санкт-Петербург
+							</p>
+							<p class="price">
+								1000 <span class="rouble">7</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="winner">
+						<div class="img-wrap">
+							<img class="face-img" src="img/fifth-screen/Ellipse9.png" alt="photo">
+							<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+						</div>
+						<div class="desc-wrap">
+							<p class="name">
+								Вася Петров
+							</p>
+							<p class="city">
+								Санкт-Петербург
+							</p>
+							<p class="price">
+								10 000 <span class="rouble">7</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="winner">
+						<div class="img-wrap">
+							<img class="face-img" src="img/fifth-screen/Ellipse10.png" alt="photo">
+							<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+						</div>
+						<div class="desc-wrap">
+							<p class="name">
+								Вася Петров
+							</p>
+							<p class="city">
+								Санкт-Петербург
+							</p>
+							<p class="price">
+								30 000 <span class="rouble">7</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrap-winners wrap-winners-mobile swiper-container">
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-wrapper">
+
+						<div class="winner swiper-slide">
+							<div class="img-wrap">
+								<img class="face-img" src="img/fifth-screen/Ellipse8.png" alt="photo">
+								<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+							</div>
+							<div class="desc-wrap">
+								<p class="name">
+									Вася Петров
+								</p>
+								<p class="city">
+									Санкт-Петербург
+								</p>
+								<p class="price">
+									1000 <span class="rouble">7</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="winner swiper-slide">
+							<div class="img-wrap">
+								<img class="face-img" src="img/fifth-screen/Ellipse9.png" alt="photo">
+								<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+							</div>
+							<div class="desc-wrap">
+								<p class="name">
+									Вася Петров
+								</p>
+								<p class="city">
+									Санкт-Петербург
+								</p>
+								<p class="price">
+									10 000 <span class="rouble">7</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="winner swiper-slide">
+							<div class="img-wrap">
+								<img class="face-img" src="img/fifth-screen/Ellipse10.png" alt="photo">
+								<img class="back-img" src="img/fourth-screen/surface.svg" alt="back-img">
+							</div>
+							<div class="desc-wrap">
+								<p class="name">
+									Вася Петров
+								</p>
+								<p class="city">
+									Санкт-Петербург
+								</p>
+								<p class="price">
+									30 000 <span class="rouble">7</span>
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="future-winner">
+					<div class="inner-container">
+						<div class="left-img">
+							<div class="inner-photo">
+								<img class='winner-img' src="img/fifth-screen/winner.png" alt="winner">
+							</div>
+							<img class='back-img' src="img/fifth-screen/surface1.svg" alt="winner-back">
+						</div>
+						<div class="center">
+							<p>
+								Победителя пока нет.
+							</p>
+							<p>Розыгрыш 27 марта.</p>
+							<p>Успей выйграть <span class="orange-note">100 000 <span class="rouble">7</span></span></p>
+						</div>
+						<a href="#" class="button-radius orange-border button-link-border prompt-button">
+							Выйграть сотку
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-6 section">
+			<div class="container">
+				<h3>Новости</h3>
+
+				<div class="news row-news">
+					<a href="#" class="news-post small-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new1.png" alt="new1">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Выбор вуза не из финансовых возможностей, а по желанию изучать конкретную сферу
+							</p>
+						</div>
+					</a>
+
+					<a href="#" class="news-post small-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new2.png" alt="new2">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Выбор вуза не из финансовых возможностей, а по желанию изучать конкретную сферу
+							</p>
+						</div>
+					</a>
+					<a href="#" class="news-post small-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new3.png" alt="new3">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Система грантов в России для своих. Мы стали ближе к западному образованию?
+							</p>
+						</div>
+					</a>
+					<a href="#" class="news-post small-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new4.png" alt="new4">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Система грантов в России для своих. Мы стали ближе к западному образованию?
+							</p>
+						</div>
+					</a>
+                    <a href="#" class="news-post big-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new5.png" alt="new4">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Система грантов в России для своих. Мы стали ближе к западному образованию?
+							</p>
+						</div>
+					</a>
+					<a href="#" class="news-post big-post">
+						<div class="img-block">
+							<img src="img/sixth-screen/new5.png" alt="new4">
+						</div>
+						<div class="desc-block">
+							<h6>
+
+							</h6>
+							<p>
+								Система грантов в России для своих. Мы стали ближе к западному образованию?
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <nav class="footer-navigation">
+                        <ul class="footer-navigation__list">
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link" onclick="showUniversitiesForm()">
+                                    Регистрация в программе
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Правила и сроки проведения розыгрыша
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__icon-box">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer-copyrights">
+                        <a href="#" class="footer-copyrights__link">
+                            <img src="./img/footer/footer-logo.svg" alt="" class="footer-copyrights__logo">
+                        </a>
+                        <p class="footer-copyrights__text">
+                            © 2019-2020 г. Все права защищены ООО «ИТ Сервис» ОГРН 1187847205424
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="footer-copyrights__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer-copyrights__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+	<div class="popup thanks">
+		<div class="top-part">
+			<h3>О, ты очень интересная личность!</h3>
+			<p>Мы подобрали для тебя интересную специальность. Сейчас на рынке такие специалисты получают от 10 000 до
+				100 000 рублей.</p>
+		</div>
+		<div class="bottom-part">
+			<p>Чтобы узнать, какая профессия тебе подходит, укажи e-mail, все результаты отправим туда.</p>
+			<form action="#">
+				<p>
+					<span class="error-field">Неверный e-mail адрес</span>
+					<input type="email" placeholder="Email" class="button-radius button-link">
+				</p>
+				<input type="submit" class="button-radius button-link yellow-grad" value="УЗНАТЬ РЕЗУЛЬТАТЫ">
+
+
+			</form>
+		</div>
+	</div>
+
+	<script src='js/jquery.min.js'></script>
+  <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src='js/script.js'></script>
+</body>
+
+<div class="layer"></div>
+
+</html>

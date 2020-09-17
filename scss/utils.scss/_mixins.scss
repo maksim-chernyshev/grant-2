@@ -1,0 +1,109 @@
+@import "./vars";
+
+@mixin flex-style ($flex, $flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
+    display: $flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+  }
+
+@mixin text-style ($fw, $fs, $lh: normal, $color: inherit, $text-transform: none) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+    text-transform: $text-transform;
+}
+
+@mixin border-bottom-left {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@mixin yellow-btn ($width: 100%) {
+    height: 56px;
+    width: $width;
+    border-radius: 35px;
+    background: radial-gradient(132.41% 132.41% at 50.17% 28.7%, $orange 0%, $red 100%);
+    @include text-style(600, 18px, 135%, #fff, uppercase);
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+        background: linear-gradient(180deg, $orange 0%, $red 100%);
+    }
+}
+
+@mixin white-btn ($width: 100%, $hover-color: inherit) {
+    height: 40px;
+    width: $width;
+    border-radius: 35px;
+    background: transparent;
+    border: 4px solid #fff;
+    transition: 0.2s;
+        &:hover {
+            background: #fff;
+            color: $hover-color;
+        }
+}
+
+@mixin blue-bordered-btn($width) {
+    height: 40px;
+    width: $width;
+    border-radius: 35px;
+    background: transparent;
+    border: 4px solid $blue;
+    color: $blue;
+    transition: 0.2s;
+    &:hover {
+        background: $blue;
+        color: #fff;
+    }
+}
+
+@mixin small-rating-block ($display: none) {
+    height: 38px;
+    width: 100px;
+    margin-right: 16px;
+    @include flex-style($display, row, center, center);
+    @include text-style(900, 28px, 127%, #fff);
+    border-radius: 42px;
+    background: $orange-gradient;
+    .star {
+        margin-right: 5px;
+    }
+}
+
+@mixin show-more-btn($text-line-color: $blue, $font-size: inherit, $font-weight: 600, $line-height: 100%, $height: 56px, $bottom-shift: 0) {
+    position: relative;
+        height: $height;
+        @include flex-style(flex, row, center, center);
+        @include text-style($font-weight, $font-size, $line-height, $text-line-color);
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: $bottom-shift;
+            left: 3%;
+            width: 94%;
+            height: 2px;
+            background: $text-line-color;
+        }
+}
+
+@mixin dots($border-heigth: 1px, $border-color: inherit, $bottom-shift: 0, $border-style: dashed) {
+    position: relative;
+    bottom: $bottom-shift;
+    width: 100%;
+    margin: 0 4px;
+    border-bottom: $border-heigth $border-style $border-color;
+}
+
+@mixin disabled-button {
+    height: 44px;
+    width: 148px;
+    background: $secondary-text-light;
+    border-radius: 35px;
+    @include text-style(700, 18px, 135%, #fff, uppercase);
+    &:hover {
+        background: $secondary-text-light;
+    }
+}

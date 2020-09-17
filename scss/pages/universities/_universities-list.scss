@@ -1,0 +1,242 @@
+@import "../../utils";
+
+.universities {
+    position: relative;
+    top: -155px;
+}
+
+.university-card-block:not(:last-child) {
+    margin-bottom: 29px;
+}
+
+.university-info {
+    @include flex-style(flex, column, space-between);
+    flex: 2;
+    padding: 18px;
+    border-right: 1px dashed $blue;
+    @media (max-width: 940px) {
+        @include flex-style(flex, column, space-evenly, center);   
+        border-right: none;
+    }
+    @media (max-width: 540px) {
+        padding: 27px 10px 0;
+    }
+    &__block-1 {
+        display: flex;
+    }
+    &__logo {
+        margin-right: 33px;
+        margin-top: auto;
+        height: 120px;
+        @media (max-width: 1210px) {
+            margin: auto;
+            margin-right: 3px;
+        }
+        @media (max-width: 940px){
+            margin-right: 20px;
+        }
+        @media (max-width: 340px){
+            margin-right: 5px;
+        }
+    }
+    &__name {
+        @include text-style(700, 32px, 125%, inherit, uppercase);
+        text-align: left;
+    }
+    &__fullname {
+        @include text-style(600, 18px, 135%);
+        @media (max-width: 340px) {
+            font-size: 16px;
+        }
+    }
+    &__block-2,
+    &__block-3 {
+        margin-left: 25px;
+        @media (max-width: 540px) {
+            display: none;
+        }
+    }
+    &__block-3 {
+        @media (max-width: 1210px) {
+            display: none;
+        }
+    }
+    &__link {
+        @include text-style(600, 18px, 100%);
+    }
+    &__link:first-child {
+        position: relative;
+        text-decoration: underline;
+        margin-right: 50px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -27px;
+            height: 100%;
+            width: 100%;
+            background: url("../img/universities/website-icon.png") no-repeat;
+        }
+    }
+    &__link:last-child {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -27px;
+            height: 100%;
+            width: 100%;
+            background: url("../img/universities/phone-icon.png") no-repeat;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            border-bottom: 1px solid $blue;
+            transition: 0.3s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+        @media (max-width: 1210px) {
+            margin-top: 20px;
+        }
+    }
+    &__address {
+        position: relative;
+        text-align: left;
+        @include text-style(600, 18px, 100%);
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -27px;
+            height: 100%;
+            width: 100%;
+            background: url("../img/universities/location-icon.png") no-repeat;
+        }
+    }
+}
+
+.university-details {
+    @include flex-style(flex, column);
+    flex: 3;
+    padding: 12px 27px 35px;
+    @media (max-width: 940px) {
+        display: none;
+    }
+    &__wrapper {
+        @include flex-style(flex, row, space-between);
+        flex-wrap: wrap;
+    }
+    &__block {
+        width: fit-content;
+        @include flex-style(flex, column, space-between);
+        min-width: 170px;
+        margin-top: 36px;
+        
+    }
+    &__block:nth-child(4),
+    &__block:nth-child(6){
+        @media (max-width: 1210px) {
+            display: none;
+        }
+    }
+    &__inner {
+        @include flex-style(flex, row, center, center);
+    }
+    &__icon {
+        height: 24px;
+        margin-right: 12px;
+    }
+    &__title {
+        @include text-style(700, 32px, 125%);
+    }
+    &__text {
+        @include text-style(600, 18px, 135%);
+        text-align: center;
+    }
+    &__look-majors {
+        @include text-style(700, 18px, 135%, $orange);
+        margin-left: auto;
+        margin-top: 11px;
+        border-bottom: 2px solid $orange;
+        transition: 0.3s;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.university-rating {
+    @include flex-style(flex, column);
+    flex: 1;
+    padding: 43px 13px 27px;
+    background: $orange-gradient;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    @media (max-width: 540px) {
+        padding: 10px 15px 15px;
+        @include flex-style(flex, row, space-evenly, center);
+        background: #fff;
+        border-bottom-left-radius: 20px;
+        height: fit-content;
+    }
+    &__number-sm {
+        @include small-rating-block;
+        @media (max-width: 540px) {
+            display: flex;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        width: 140px;
+        margin: 0 auto 5px;
+        @media (max-width: 540px) {
+            display: none;
+        }
+    }
+    &__number {
+        margin-right: 17px;
+        @include text-style(900, 68px, 127%, #fff);
+        
+    }
+    &__icon {
+        height: 22px;
+        margin-top: 15px;
+    }
+    &__link {
+        margin: auto auto 0;
+        @include white-btn(150px, $red);
+        @include flex-style(flex, row, center, center);
+        @include text-style(600, 18px, 135%, #fff);
+        @media (max-width: 540px) {
+            @include blue-bordered-btn(176px);
+            margin: 0;
+        }
+    }
+}
+
+.stars {
+    display: flex;
+    margin: 0 auto;
+    @media (max-width: 540px) {
+        display: none;
+    }
+    .star {
+        width: 25px;
+        height: 25px;
+        background-image: url("../img/universities/star.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  }
+
+.stars--4 {
+    .star:nth-child(-n+4) {
+        background-image: url("../img/universities/active-star.svg");
+    }
+}

@@ -1,0 +1,20 @@
+@import "../../utils";
+
+.similar-universities {
+    &__wrapper {
+        @include flex-style(flex, column);
+    }
+    &__title {
+        margin-bottom: 32px;
+        @include text-style(700, 32px, 125%, $blue, uppercase);
+        text-align: left;
+    }
+    &__show-more-button {
+        margin-left: auto;
+        margin-bottom: 67px;
+        @include show-more-btn(#fff, 28px, 600, 100%, 35px, -4px);
+        @media (max-width: 550px) {
+            margin: auto;
+        }
+    }
+}

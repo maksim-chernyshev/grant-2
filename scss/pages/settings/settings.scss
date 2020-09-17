@@ -1,0 +1,222 @@
+@import "../../utils";
+
+.main-settings {
+    background: $blue;
+    padding: 92px 0 40px;
+    @media (max-width: 620px) {
+        padding: 30px 0 56px;
+    }
+}
+
+.settings {
+    &__wrapper {
+        width: 570px;
+        @include flex-style(flex, column);
+        @media (max-width: 1300px) {
+            margin: 0 auto;
+        }
+        @media (max-width: 620px) {
+            width: 100%;
+        }
+    }
+    &__titles-wrapper--success {
+        display: none
+    }
+    &__title {
+        // display: none;
+        margin-bottom: 12px;
+        text-align: left;
+        @include text-style(700, 32px, 125%, $orange, uppercase);
+        @media (max-width: 1300px) {
+            text-align: center;
+        }
+        @media (max-width: 620px) {
+            text-align: left;
+        }
+    }
+    &__title-2 {
+        // display: none;
+        margin-bottom: 42px;
+        text-align: left;
+        @include text-style(600, 28px, 125%, #fff);
+        @media (max-width: 1300px) {
+            text-align: center;
+        }
+        @media (max-width: 620px) {
+            text-align: left;
+        }
+    }
+}
+
+.settings-form {
+    @include flex-style(flex, column);
+    &__blocks-wrapper {
+        @include flex-style(flex, row, space-between);
+        @media (max-width: 620px) {
+            @include flex-style(flex, column);
+        }
+    }
+    &__block {
+        @include flex-style(flex, column);
+    }
+    &__photo-box {
+        width: 267px;
+        margin-bottom: 57px;
+        @include flex-style(flex, row, flex-start, center);
+    }
+    &__photo-input {
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+    }
+    &__photo-label {
+        position: relative;
+        height: 127px;
+        width: 127px;
+        margin-right: 21px;
+        border-radius: 50%;
+        background: #fff;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover .settings-form__upload-text,
+        &:hover .settings-form__photo-background {
+            opacity: 1;
+        }
+    }
+    &__photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    &__upload-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        @include text-style(700, 18px, 135%, $blue);
+        transition: 0.3s;
+        opacity: 0;
+        z-index: 2;
+    }
+    &__photo-background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(189, 189, 189, 0.5);
+        transition: 0.3s;
+        opacity: 0;
+        z-index: 1;
+    }
+    &__photo-text {
+        @include text-style(600, 18px, 135%, $secondary-text-light)
+    }
+    &__input {
+        height: 56px;
+        line-height: 56px;
+        width: 267px;
+        margin-bottom: 36px;
+        padding: 13px 23px;
+        border-radius: 55px;
+        &::placeholder {
+            @include text-style(500, 18px, 135%, $secondary-text-light);
+            margin: auto 0;
+        }
+        &--number::-webkit-outer-spin-button,
+        &--number::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+          }
+        @media (max-width: 620px) {
+            width: 100%;
+        }
+    }
+    &__select-wrapper {
+        position: relative;
+        height: 56px;
+        width: 267px;
+        margin-bottom: 36px;
+        @media (max-width: 620px) {
+            width: 100%;
+        }
+    }
+    &__button {
+        @include yellow-btn(100%)
+    }
+
+    .ui-selectmenu-button-closed {
+        .ui-selectmenu-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                background-color: $main-bg-light !important;
+                background-image: url("../img/select-university/arrow-down.png") !important;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-top-right-radius: 55px;
+                border-bottom-right-radius: 55px;
+            }
+    }
+
+    .ui-selectmenu-button-open {
+        .ui-selectmenu-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                background-color: $main-bg-light !important;
+                background-image: url("../img/select-university/arrow-down.png") !important;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-top-left-radius: 55px;
+                border-bottom-left-radius: 55px;
+                transform: rotate(180deg);
+            }
+    }
+
+    .ui-selectmenu-button {
+        height: 100% !important;
+        width: 100% !important;
+        padding: 19px 23px !important;
+        border-radius: 55px !important;
+    }
+    .ui-selectmenu-text {
+        @include text-style(500 !important, 18px !important, 100%, $secondary-text-light !important);
+    }
+
+    .ui-menu-item .ui-menu-item-wrapper {
+        height: 48px !important;
+        padding: 0 14px !important;
+    }
+
+    // &::-webkit-scrollbar {
+    //     width: 10px;
+    //   }
+    // &::-webkit-scrollbar-track {
+    //     background: $secondary-text-light; 
+    //   }
+    // &::-webkit-scrollbar-thumb {
+    //     background: #888; 
+    //   }
+      
+    //   /* Handle on hover */
+    // &::-webkit-scrollbar-thumb:hover {
+    //     background: #555; 
+    // } 
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
