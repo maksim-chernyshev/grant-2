@@ -113,10 +113,10 @@
     <main>
         <section class="professions-section">
             <h3 class="professions-main-title">Кем работать</h3>
-            <div class="professions-wrapper">
-                <div class="professions-item">
-                    <div class="professions-item-top">
-                        <h4 class="profession-title">Адвокат</h4>
+            <div class="container">
+                <article class="professions-card-block">
+                    <div class="professions-card-top">
+                        <h4 class="profession-cardtitle">Адвокат</h4>
                         <div class="profession-description">
                             Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию,
                             эмбриологию. Программа подготовки студентов включает. Программа подготовки студентов
@@ -143,9 +143,9 @@
                         <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                     </div>
                     <p class="total">Можно найти работу в любом городе, но есть конкурс на место</p>
-                </div>
+                </article>
 
-                <div class="professions-item">
+                <article class="professions-card-block">
                     <div class="professions-item-top">
                         <h4 class="profession-title">Адвокат</h4>
                         <div class="profession-description">
@@ -174,9 +174,9 @@
                         <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                     </div>
                     <p class="total">Можно найти работу в любом городе, но есть конкурс на место</p>
-                </div>
+                </article>
 
-                <div class="professions-item">
+                <article class="professions-card-block">
                     <div class="professions-item-top">
                         <h4 class="profession-title">Адвокат</h4>
                         <div class="profession-description">
@@ -205,9 +205,9 @@
                         <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                     </div>
                     <p class="total">Можно найти работу в любом городе, но есть конкурс на место</p>
-                </div>
+                </article>
 
-                <div class="professions-item">
+                <article class="professions-card-block">
                     <div class="professions-item-top">
                         <h4 class="profession-title">Адвокат</h4>
                         <div class="profession-description">
@@ -236,7 +236,7 @@
                         <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                     </div>
                     <p class="total">Можно найти работу в любом городе, но есть конкурс на место</p>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -604,9 +604,64 @@
                     </div>
                 </article>
 
+                <button class="more-info">
+                    Показать еще
+                </button>
             </div>
         </section>
     </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <nav class="footer-navigation">
+                        <ul class="footer-navigation__list">
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link" onclick="showUniversitiesForm()">
+                                    Регистрация в программе
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Правила и сроки проведения розыгрыша
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__icon-box">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer-copyrights">
+                        <a href="#" class="footer-copyrights__link">
+                            <img src="./img/footer/footer-logo.svg" alt="" class="footer-copyrights__logo">
+                        </a>
+                        <p class="footer-copyrights__text">
+                            © 2019-2020 г. Все права защищены ООО «ИТ Сервис» ОГРН 1187847205424
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="footer-copyrights__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer-copyrights__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
