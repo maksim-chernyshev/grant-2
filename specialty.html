@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специальность</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+</head>
+
+<body>
+    <div class="form-window">
+		<div class="form-header">
+			<a href="#" class="form-link form-link-active form-link-active-hide" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти в систему</a>
+			<a href="#" class="form-link form-link-active form-link-active-small" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти</a>
+			<a href="#" class="form-link" onclick="switchFormState('none', 'flex', 'none', 'flex', 'none')">Зарегестрироваться</a>
+			<button type="button" class="form-close" onclick="showMainForm('none')" >
+				<svg class="form-close-icon"  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M27 5L5 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+					<path d="M5 5L27 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+				</svg>
+			</button>
+		</div>
+		<div class="form-body">
+			<div class="form-socials">
+				<h5 class="form-socials-title">С помощью социальной сети</h5>
+				<div class="form-socials-list">
+					<a href="https://www.vk.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/vk.png" alt="Вконтакте" class="form-socials-icon">
+					</a>
+					<a href="https://www.google.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/gmail.png" alt="Gmail" class="form-socials-icon">
+					</a>
+					<a href="https://www.facebook.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/facebook.png" alt="Facebook" class="form-socials-icon">
+					</a>
+				</div>
+			</div>
+			<form action="" class="form-login">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<button type="submit" class="form-login-button">Войти</button>
+				<button type="button" class="form-remind-password-button" onclick="switchFormState('none', 'none', 'flex', 'none', 'none')">Напомнить пароль</button>
+			</form>
+			<form action="" class="form-signup">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<label for="direction" class="form-label">
+					<input type="text" id="direction" class="form-input" placeholder="Направление" required>
+					<span class="form-prompt">Например: Экономика</span>
+				</label>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+				<button type="submit" class="form-login-button">Зарегестрироваться</button>
+			</form>
+			<form action="" class="form-forgot-pass">
+				<h4 class="form-title">Введите Email<br> для востановления пароля</h4>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<button type="submit" class="form-login-button" onclick="switchFormState('none', 'none', 'none', 'none', 'flex')">Восстановить</button>
+			</form>
+			<div class="form-message">
+				<img src="./img/form/message-icon.png" alt="message" class="form-message-icon">
+				<h4 class="form-title">
+					Письмо отправлено, проверьте пожалуйста почту
+				</h4>
+			</div>
+		</div>
+	</div>
+
+    <div class="form-fade-background" onclick="showMainForm('none')"></div>
+    
+    <header class="main-header">
+		<div class="wrap-bg">
+			<!-- <img src="img/main/bg-violet.svg" alt="" class="main-bg img-bg-violet "> -->
+			<!-- <img src="img/main/main-bg-build.png" alt="" class="main-bg img-bg-left-build"> -->
+			
+        </div>
+        
+
+        <img src="img/main/mobile-build.svg" class='mobile-build-head' alt="mobile-build">
+		<div class="container">
+			<img src="img/specialty/specialist.png" alt="" class="main-bg img-bg-right-student">
+			<div class="top">
+				<a href="index.html" class="logo"><img src="img/main/logo.svg" alt="logo"></a>
+				<a href="#" class="enter button-radius" onclick="showMainForm('flex')">Войти</a>
+            </div>
+            
+
+            <div class="content">
+				<div class="left-part half-width">
+					<h1>
+						Юриспруденция
+                    </h1>
+                    <div class="content-description">
+                        Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Кроме них преподаются спецдисциплины — техника добыч зверей и птиц, учет животных, экономика охотхозяйства, природоохранное законодательство, заповедное дело, типология охотничьих угодий, трофейное дело и основы таксидермии, фотография биологических объектов, товароведение, охотничье Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Кроме них преподаются спецдисциплины — техника добыч зверей и птиц, учет животных, экономика охотхозяйства, природоохранное законодательство, заповедное дело, типология охотничьих угодий, трофейное дело и основы таксидермии, фотография биологических объектов, товароведение, охотничье Свернуть
+                    </div>
+
+                    <button class="button-radius yellow btn-big">Хочу изучать</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
