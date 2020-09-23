@@ -2298,6 +2298,14 @@ header {
          object-fit: cover;
       height: 85%;
       right: -150px; }
+      .main-header .mobile-student-head {
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        height: 100%;
+        left: 0;
+        opacity: 0.2;
+      }
     .main-header .content .left-part .search-wrap {
       margin-bottom: 30px; }
       .main-header .content .left-part .search-wrap form {
