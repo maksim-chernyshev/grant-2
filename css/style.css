@@ -468,6 +468,11 @@ ul {
   padding: 0 27px;
   text-transform: uppercase;
   font-family: "Lato Black"; }
+  @media (max-width: 420px) {
+    .btn-big {
+      margin: 0 auto;
+    }
+  }
 
 .yellow-grad {
   background: -o-radial-gradient(50.17% 28.7%, 132.41% 132.41%, #FFC000 0%, #EF1717 100%);
@@ -1449,6 +1454,21 @@ header {
       padding-top: 4.9vw;
       z-index: 2;
       width: 55%; }
+      @media (max-width: 420px) {
+        header .content .left-part {
+          text-align: center;
+          padding-bottom: 28px;
+          } }
+      header .content .left-part .btn-big {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+      }
       header .content .left-part h1 {
         margin-bottom: 0.9vw;
         text-align: left;
@@ -1456,6 +1476,21 @@ header {
         line-height: 127%;
         -webkit-animation: fadeIn-translate-left 1s;
                 animation: fadeIn-translate-left 1s; }
+        @media (max-width: 420px) {
+          header .content .left-part h1 {
+            text-align: center;
+            text-transform: none;
+            font-family: 'Lato';
+          } }
+      header .content .left-part .content-description {
+        /* вписать стили для больших разрешений */
+      }
+      @media (max-width: 420px) {
+        header .content-description {
+          margin-bottom: 32px;
+          font-size: 18px;
+          line-height: 24px;
+      } }
       header .content .left-part h3 {
         margin-bottom: 1.5vw;
         text-align: left;
@@ -2325,6 +2360,9 @@ header {
     white-space: nowrap; }
   header .content .left-part {
     width: 50%; }
+  header .content-description {
+    margin-bottom: 36px;
+  }
   header .content .right-part {
     width: 50%; }
   header .content .right-part .girl-slider .swiper-slide {
@@ -2784,13 +2822,12 @@ header {
   header .top .enter {
     max-width: 130px; } }
 
-@media screen and (max-width: 360px) {
-  .section-5 .future-winner .inner-container .center {
+.section-5 .future-winner .inner-container .center {
     padding: 0 10px; }
-    .section-5 .future-winner .inner-container .center p {
+.section-5 .future-winner .inner-container .center p {
       font-size: 24px; }
-  footer .facebook {
-    bottom: 385px; } }
+footer .facebook {
+    bottom: 385px; }
 
 .main-universities {
   position: relative;
