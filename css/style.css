@@ -6408,7 +6408,7 @@ input[type=number] {
     justify-content: space-between;
     width: 100%;
     flex-wrap: nowrap;
-    flex-grow: 1;
+    white-space: nowrap;
   }
 
   .salary-min,
@@ -6417,7 +6417,8 @@ input[type=number] {
   }
 
   .salary-ellipsis {
-    width: 19%;
+    position: relative;
+    width: 100%;
     border-bottom: 2px dotted blue;
     margin-bottom: 5px;
   }
