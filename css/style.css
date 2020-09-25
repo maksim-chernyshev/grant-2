@@ -6391,6 +6391,8 @@ input[type=number] {
   }
 
   .salary-block {
+    display: flex;
+    flex-direction: column;
     margin: 20px;
     font-size: 18px;
     line-height: 24px;
@@ -6399,16 +6401,23 @@ input[type=number] {
     display: none;
   }
 
+  .salary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+
   .salary-min,
   .salary-med {
     margin-bottom: 10px;
   }
 
-  .salary-min::after,
-  .salary-med::after,
-  .salary-max::after {
-    content: "";
-    width: 50px;
-    border-bottom: 1px dotted blue;
+  .salary-ellipsis {
+    width: 19%;
+    border-bottom: 2px dotted blue;
+    margin-bottom: 5px;
   }
 }
