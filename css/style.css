@@ -6367,6 +6367,7 @@ input[type=number] {
   .profession-card-block {
     border-radius: 15px;
     margin-bottom: 28px;
+    padding-bottom: 28px;
     box-shadow: 0px 4px 26px 0px #ACC1FF;
 
   }
@@ -6419,5 +6420,43 @@ input[type=number] {
     width: 19%;
     border-bottom: 2px dotted blue;
     margin-bottom: 5px;
+  }
+
+  .demand-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 10px;
+  }
+
+  .demand-main-title {
+    font-size: 18px;
+    line-height: 24px;
+    color: #4F4F4F;
+    flex-grow: 1;
+  }
+
+  .demand-lightning-block {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .profession-card-total {
+    margin: 0 20px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #BDBDBD;
+  }
+
+  .universities-main-title {
+    margin-bottom: 28px;
+    text-transform: none;
+    font-size: 32px;
+    line-height: 40px;
+    color: #416BE5;
   }
 }
