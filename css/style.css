@@ -6459,4 +6459,37 @@ input[type=number] {
     line-height: 40px;
     color: #416BE5;
   }
+
+  .more-info-button {
+    display: block;
+    width: 268px;
+    background: transparent;
+    border: 4px solid #FFFFFF;
+    color: #FFFFFF;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    margin: 0 auto;
+    padding: 16px 0;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .more-info-button:hover,
+  .more-info-button:active {
+    color: rgba(65, 107, 229, 1);
+    background-color: #FFFFFF;
+  }
+
+
 }
+
+/* background-color: rgb(255, 255, 255);
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat: repeat;
+background-attachment: scroll;
+background-image: none;
+background-size: auto;
+background-origin: padding-box; */
