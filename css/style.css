@@ -6354,7 +6354,7 @@ footer .facebook {
 input[type=number] {
   -moz-appearance: textfield; }
 
-@media (max-width: 420px) {
+@media (max-width: 570px) {
   .professions-section {
     padding: 48px 0 0;
   }
