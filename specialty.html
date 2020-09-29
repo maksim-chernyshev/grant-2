@@ -71,16 +71,19 @@
 
     <div class="form-fade-background" onclick="showMainForm('none')"></div>
      -->
-    <header class="main-header">
+    <header class="specialty-header">
         <div class="wrap-bg">
             <!-- <img src="img/main/bg-violet.svg" alt="" class="main-bg img-bg-violet "> -->
-        </div>
-        <img src="img/specialty/specialist.png" alt="" class="mobile-student-head">
-
-        <div class="container">
+         </div>
+         <div class="gradient-left"></div>
+         <div class="wrap-bg-img">
+            <img src="img/specialty/specialist.png" class="mobile-student-head" alt="">
+         </div>
+         <div class="gradient-right"></div>
+         <div class="container">
             <div class="top">
                 <a href="index.html" class="logo"><img src="img/main/logo.svg" alt="logo"></a>
-                <a href="#" class="enter button-radius" onclick="showMainForm('flex')">Войти</a>
+                <a href="#" class="enter button-radius enter-specialty" onclick="showMainForm('flex')">Войти</a>
             </div>
 
 
@@ -90,7 +93,7 @@
                         Юриспруденция
                     </h1>
                     <div class="content-description">
-                        Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Кроме них преподаются спецдисциплины — техника добыч зверей и птиц, учет животных, экономика охотхозяйства, природоохранное законодательство, заповедное дело, типология охотничьих угодий, трофейное дело и основы таксидермии, фотография биологических объектов, товароведение Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Кроме них преподаются спецдисциплины — техника добыч зверей и птиц, учет животных, экономика охотхозяйства, природоохранное законодательство, заповедное дело, типология охотничьих угодий, трофейное дело и основы таксидермии, фотография биологических объектов, товароведение Свернуть
+                        Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Кроме них преподаются спецдисциплины — техника добыч зверей и птиц, учет животных, экономика охотхозяйства, природоохранное законодательство, заповедное дело, типология охотничьих угодий, трофейное дело и основы таксидермии, фотография биологических объектов, товароведение, охчье... Полное описание
                     </div>
 
                     <button class="button-radius yellow btn-big">Хочу изучать</button>
@@ -102,30 +105,41 @@
 
     <main>
         <section class="professions-section">
-            <h3 class="professions-main-title">Кем работать</h3>
             <div class="container">
+                <h3 class="professions-main-title">Кем работать</h3>
                 <article class="profession-card-block">
                     <div class="profession-card-top">
                         <h4 class="profession-card-title">Адвокат</h4>
                         <div class="profession-card-description">
-                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию,
-                            эмбриологию. Программа подготовки студентов включает. Программа подготовки студентов
-                            включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Программа
-                            подготовки студентов включает.Программа подготовки студентов включает базовые предметы —
-                            зоологию, ботанику, гистологию, эмбриологию. Программа подготовки студентов
-                            включает.Программа подготовки студентов включает базовые предметы — зоологию, ботанику,
-                            гистологию, эмбриологию. Программа подготовки студентов включает.Программа подготовки
-                            студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.
+                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.  Программа подготовки студентов вкает... Полное описание
                         </div>
                     </div>
                     <div class="salary-block">
-                        <img class="coins-img" src="img/specialty/coins-min.svg"></svg>
-                        <div class="salary salary-min">Мин. зар. плата<div class="salary-ellipsis"></div>30 000 Р</div>
-                        <div class="salary salary-med">Средн. зар. плата<div class="salary-ellipsis"></div>60 000 Р</div>
-                        <div class="salary salary-max">Макс. зар. плата<div class="salary-ellipsis"></div>4 000 000 Р</div>
+                        <ul class="salary-list">
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-min.svg"></svg>
+                                <span class="salary-title">Мин. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">30 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-mid.svg"></svg>
+                                <span class="salary-title">Средн. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">60 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-max.svg"></svg>
+                                <span class="salary-title">Макс. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">4 000 000 Р</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="demand-block">
+                        <img class="demand-title-img" src="img/specialty/portfolio.svg">
                         <span class="demand-main-title">Востребованность</span>
+                        <span class="demand-main-title--full">Востребованность на рынке</span>
                         <div class="demand-lightning-block">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
@@ -139,26 +153,81 @@
 
                 <article class="profession-card-block">
                     <div class="profession-card-top">
-                        <h4 class="profession-card-title">Адвокат</h4>
+                        <h4 class="profession-card-title">Судья</h4>
                         <div class="profession-card-description">
-                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию,
-                            эмбриологию. Программа подготовки студентов включает. Программа подготовки студентов
-                            включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Программа
-                            подготовки студентов включает.Программа подготовки студентов включает базовые предметы —
-                            зоологию, ботанику, гистологию, эмбриологию. Программа подготовки студентов
-                            включает.Программа подготовки студентов включает базовые предметы — зоологию, ботанику,
-                            гистологию, эмбриологию. Программа подготовки студентов включает.Программа подготовки
-                            студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.
+                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию
                         </div>
                     </div>
                     <div class="salary-block">
-                        <img class="coins-img" src="img/specialty/coins-min.svg"></svg>
-                        <div class="salary salary-min">Мин. зар. плата<div class="salary-ellipsis"></div>30 000 Р</div>
-                        <div class="salary salary-med">Средн. зар. плата<div class="salary-ellipsis"></div>60 000 Р</div>
-                        <div class="salary salary-max">Макс. зар. плата<div class="salary-ellipsis"></div>4 000 000 Р</div>
+                        <ul class="salary-list">
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-min.svg"></svg>
+                                <span class="salary-title">Мин. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">30 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-mid.svg"></svg>
+                                <span class="salary-title">Средн. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">60 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-max.svg"></svg>
+                                <span class="salary-title">Макс. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">4 000 000 Р</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="demand-block">
+                        <img class="demand-title-img" src="img/specialty/portfolio.svg">
                         <span class="demand-main-title">Востребованность</span>
+                        <span class="demand-main-title--full">Востребованность на рынке</span>
+                        <div class="demand-lightning-block">
+                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
+                        </div>
+                    </div>
+                    <p class="profession-card-total">Можно найти работу в любом городе, но есть конкурс на место</p>
+                </article>
+
+                <article class="profession-card-block">
+                    <div class="profession-card-top">
+                        <h4 class="profession-card-title">Адвокат</h4>
+                        <div class="profession-card-description">
+                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.  Программа подготовки студентов вкает... Полное описание
+                        </div>
+                    </div>
+                    <div class="salary-block">
+                        <ul class="salary-list">
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-min.svg"></svg>
+                                <span class="salary-title">Мин. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">30 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-mid.svg"></svg>
+                                <span class="salary-title">Средн. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">60 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-max.svg"></svg>
+                                <span class="salary-title">Макс. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">4 000 000 Р</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="demand-block">
+                        <img class="demand-title-img" src="img/specialty/portfolio.svg">
+                        <span class="demand-main-title">Востребованность</span>
+                        <span class="demand-main-title--full">Востребованность на рынке</span>
                         <div class="demand-lightning-block">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
@@ -172,65 +241,43 @@
 
                 <article class="profession-card-block">
                     <div class="profession-card-top">
-                        <h4 class="profession-card-title">Адвокат</h4>
+                        <h4 class="profession-card-title">Судья</h4>
                         <div class="profession-card-description">
-                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию,
-                            эмбриологию. Программа подготовки студентов включает. Программа подготовки студентов
-                            включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Программа
-                            подготовки студентов включает.Программа подготовки студентов включает базовые предметы —
-                            зоологию, ботанику, гистологию, эмбриологию. Программа подготовки студентов
-                            включает.Программа подготовки студентов включает базовые предметы — зоологию, ботанику,
-                            гистологию, эмбриологию. Программа подготовки студентов включает.Программа подготовки
-                            студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.
+                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию
                         </div>
                     </div>
                     <div class="salary-block">
-                        <img class="coins-img" src="img/specialty/coins-min.svg"></svg>
-                        <div class="salary salary-min">Мин. зар. плата<div class="salary-ellipsis"></div>30 000 Р</div>
-                        <div class="salary salary-med">Средн. зар. плата<div class="salary-ellipsis"></div>60 000 Р</div>
-                        <div class="salary salary-max">Макс. зар. плата<div class="salary-ellipsis"></div>4 000 000 Р</div>
+                        <ul class="salary-list">
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-min.svg"></svg>
+                                <span class="salary-title">Мин. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">30 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-mid.svg"></svg>
+                                <span class="salary-title">Средн. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">60 000 Р</span>
+                            </li>
+                            <li class="salary-item">
+                                <img class="salary-coins-img" src="img/specialty/coins-max.svg"></svg>
+                                <span class="salary-title">Макс. зар. плата</span>
+                                <span class="salary-dots"></span>
+                                <span class="salary-amount">4 000 000 Р</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="demand-block">
+                        <img class="demand-title-img" src="img/specialty/portfolio.svg">
                         <span class="demand-main-title">Востребованность</span>
+                        <span class="demand-main-title--full">Востребованность на рынке</span>
                         <div class="demand-lightning-block">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
                             <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                        </div>
-                    </div>
-                    <p class="profession-card-total">Можно найти работу в любом городе, но есть конкурс на место</p>
-                </article>
-
-                <article class="profession-card-block">
-                    <div class="profession-card-top">
-                        <h4 class="profession-card-title">Адвокат</h4>
-                        <div class="profession-card-description">
-                            Программа подготовки студентов включает базовые предметы — зоологию, ботанику, гистологию,
-                            эмбриологию. Программа подготовки студентов включает. Программа подготовки студентов
-                            включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию. Программа
-                            подготовки студентов включает.Программа подготовки студентов включает базовые предметы —
-                            зоологию, ботанику, гистологию, эмбриологию. Программа подготовки студентов
-                            включает.Программа подготовки студентов включает базовые предметы — зоологию, ботанику,
-                            гистологию, эмбриологию. Программа подготовки студентов включает.Программа подготовки
-                            студентов включает базовые предметы — зоологию, ботанику, гистологию, эмбриологию.
-                        </div>
-                    </div>
-                    <div class="salary-block">
-                        <img class="coins-img" src="img/specialty/coins-min.svg"></svg>
-                        <div class="salary salary-min">Мин. зар. плата<div class="salary-ellipsis"></div>30 000 Р</div>
-                        <div class="salary salary-med">Средн. зар. плата<div class="salary-ellipsis"></div>60 000 Р</div>
-                        <div class="salary salary-max">Макс. зар. плата<div class="salary-ellipsis"></div>4 000 000 Р</div>
-                    </div>
-                    <div class="demand-block">
-                        <span class="demand-main-title">Востребованность</span>
-                        <div class="demand-lightning-block">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
-                            <img class="demand-img" src="img/specialty/lightning-active.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
+                            <img class="demand-img" src="img/specialty/lightning-passive.svg" alt="">
                         </div>
                     </div>
                     <p class="profession-card-total">Можно найти работу в любом городе, но есть конкурс на место</p>
@@ -239,8 +286,8 @@
         </section>
 
         <section class="universities-section">
-            <h3 class="universities-main-title">Где получить</h3>
             <div class="container">
+                <h3 class="universities-main-title">Где получить</h3>
                 <article class="university-card-block university-card-block--active">
                     <div class="university-info">
                         <div class="university-info__block-1">
@@ -605,6 +652,12 @@
                 <a href="#" class="more-info-button button-radius">
                     Показать еще
                 </a>
+                <section class="blank-section">
+                    <div class="container">
+                        <div class="blank-section__wrapper">
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
     </main>

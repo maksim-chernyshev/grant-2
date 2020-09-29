@@ -468,11 +468,6 @@ ul {
   padding: 0 27px;
   text-transform: uppercase;
   font-family: "Lato Black"; }
-  @media (max-width: 420px) {
-    .btn-big {
-      margin: 0 auto;
-    }
-  }
 
 .yellow-grad {
   background: -o-radial-gradient(50.17% 28.7%, 132.41% 132.41%, #FFC000 0%, #EF1717 100%);
@@ -1454,7 +1449,7 @@ header {
       padding-top: 4.9vw;
       z-index: 2;
       width: 55%; }
-      @media (max-width: 420px) {
+      @media (max-width: 500px) {
         header .content .left-part {
           text-align: center;
           padding-bottom: 28px;
@@ -2333,14 +2328,6 @@ header {
          object-fit: cover;
       height: 85%;
       right: -150px; }
-      .main-header .mobile-student-head {
-        position: absolute;
-        top: 0;
-        object-fit: cover;
-        height: 100%;
-        left: 0;
-        opacity: 0.2;
-      }
     .main-header .content .left-part .search-wrap {
       margin-bottom: 30px; }
       .main-header .content .left-part .search-wrap form {
@@ -6354,35 +6341,85 @@ footer .facebook {
 input[type=number] {
   -moz-appearance: textfield; }
 
-@media (max-width: 570px) {
+  /* СТРАНИЦА СПЕЦИАЛЬНОСТЕЙ */
+  .specialty-header {
+    background-color: #416BE5;
+    min-height: 500px;
+  }
+  header .content .left-part .specialty-title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+  .content-description {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 36px;
+  }
+  .gradient-left {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(89.51deg, #416BE5 7.87%, rgba(65, 107, 229, 0) 99.56%);
+  }
+  .mobile-student-head {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 80px;
+    opacity: 0.2;
+    object-fit: cover;
+  }
+  .gradient-right {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
+    transform: matrix(-1, 0, 0, 1, 0, 0); 
+  }
+  
   .professions-section {
     padding: 48px 0 0;
   }
   .professions-main-title {
+    width: 100%;
+    text-align: center;
     font-size: 32px;
     line-height: 40px;
     text-transform: none;
     margin-bottom: 28px;
   }
+  .professions-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .profession-card-block {
+    width: 100%;
     border-radius: 15px;
     margin-bottom: 28px;
     padding-bottom: 28px;
     box-shadow: 0px 4px 26px 0px #ACC1FF;
-
   }
   .profession-card-top {
+    min-height: 162px;
     background: linear-gradient(154.75deg, #3B7BF7 12.08%, #416BE5 38.2%, #6966E0 57.99%);
     border-radius: 15px 15px 0 0;
     padding: 16px 0 22px;
   }
-
   .profession-card-title {
     color: #FFFFFF;
     font-size: 28px;
     line-height: 40px;
+    text-transform: none;
   }
-
   .profession-card-description {
     color: #FFFFFF;
     padding: 0 10px;
@@ -6390,7 +6427,6 @@ input[type=number] {
     line-height: 24px;
     text-align: center;
   }
-
   .salary-block {
     display: flex;
     flex-direction: column;
@@ -6398,11 +6434,14 @@ input[type=number] {
     font-size: 18px;
     line-height: 24px;
   }
-  .salary-block .coins-img {
-    display: none;
+  .salary-item:not(:last-child) {
+    margin-bottom: 10px;
   }
-
-  .salary {
+  .salary-coins-img {
+    min-width: 22px;
+    margin-right: 12px;
+  }
+  .salary-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6410,39 +6449,45 @@ input[type=number] {
     flex-wrap: nowrap;
     white-space: nowrap;
   }
-
   .salary-min,
-  .salary-med {
+  .salary-mid {
     margin-bottom: 10px;
   }
-
-  .salary-ellipsis {
+  .salary-dots {
     position: relative;
     width: 100%;
-    border-bottom: 2px dotted blue;
-    margin-bottom: 5px;
+    border-bottom: 1px dashed #416BE5;
+    margin-bottom: 7px;
   }
-
   .demand-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0 20px 10px;
   }
-
+  .demand-title-img {
+    width: 32px;
+    margin-right: 10px;;
+  }
   .demand-main-title {
     font-size: 18px;
     line-height: 24px;
     color: #4F4F4F;
     flex-grow: 1;
   }
-
+  .demand-main-title--full {
+    display: none;
+    font-size: 18px;
+    line-height: 24px;
+    color: #4F4F4F;
+    flex-grow: 1;
+  }
   .demand-lightning-block {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
   }
-
   .profession-card-total {
     margin: 0 20px;
     font-family: Lato;
@@ -6452,15 +6497,18 @@ input[type=number] {
     line-height: 24px;
     color: #BDBDBD;
   }
-
+  .universities-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .universities-main-title {
-    margin-bottom: 28px;
-    text-transform: none;
+    width: 100%;
     font-size: 32px;
     line-height: 40px;
-    color: #416BE5;
+    text-transform: none;
+    margin-bottom: 28px;
   }
-
   .more-info-button {
     display: block;
     width: 268px;
@@ -6476,21 +6524,73 @@ input[type=number] {
     line-height: 24px;
     text-transform: uppercase;
   }
-
   .more-info-button:hover,
   .more-info-button:active {
     color: rgba(65, 107, 229, 1);
     background-color: #FFFFFF;
   }
 
-
+@media (max-width: 400px) {
+  .demand-title-img {
+    display: none;
+  }
 }
 
-/* background-color: rgb(255, 255, 255);
-background-position-x: 0%;
-background-position-y: 0%;
-background-repeat: repeat;
-background-attachment: scroll;
-background-image: none;
-background-size: auto;
-background-origin: padding-box; */
+@media (min-width: 700px) {
+  .specialty-header {
+    padding-bottom: 70px;
+  }
+  header .content .left-part .specialty-title {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  .gradient-left {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(89.51deg, #416BE5 7.87%, rgba(65, 107, 229, 0) 99.56%);
+  }
+  .mobile-student-head {
+    right: 100px;
+    opacity: 0.3;
+  }
+  .gradient-right {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
+    transform: matrix(-1, 0, 0, 1, 0, 0); 
+  }
+  .professions-main-title {
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .professions-section .container {
+    justify-content: space-between;
+  }
+  .profession-card-block {
+    width: 48%;
+  }
+  .profession-card-top {
+    height: 162px;
+  }
+  .universities-main-title {
+   text-align: left;
+   text-transform: uppercase;
+  }
+}
+
+@media (min-width: 900px) {
+  .demand-main-title {
+    display: none;
+  }
+  .demand-main-title--full {
+    display: inline-block;
+  }
+}
