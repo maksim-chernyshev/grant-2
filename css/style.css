@@ -6342,6 +6342,19 @@ input[type=number] {
   -moz-appearance: textfield; }
 
   /* СТРАНИЦА СПЕЦИАЛЬНОСТЕЙ */
+  .opened {
+    display: inline !important;
+  }
+  .hidden-text {
+    display: none;
+  }
+  .show-text-link {
+    color: yellow;
+  }
+  .hide-text-link {
+    display: inline;
+    color: yellow;
+  }
   .specialty-header {
     background-color: #416BE5;
     min-height: 500px;
