@@ -2243,9 +2243,9 @@ header {
     min-height: 540px;
     min-width: 1230px; }
   header {
-    height: 540px; }
+    min-height: 540px; }
   header .main-bg {
-    height: 540px; }
+    min-height: 540px; }
   header .img-bg-left-build {
     height: 537px; }
   header .img-bg-right-build {
@@ -6352,6 +6352,7 @@ input[type=number] {
     color: yellow;
   }
   .hide-text-link {
+    content: "Свернуть";
     display: inline;
     color: yellow;
   }
@@ -6619,6 +6620,10 @@ input[type=number] {
 }
 
 @media (min-width: 900px) {
+  .specialty-header .top .enter {
+    border-color: #fff;
+    color: #fff; }
+
   .demand-main-title {
     display: none;
   }
