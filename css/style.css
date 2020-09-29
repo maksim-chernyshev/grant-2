@@ -6350,6 +6350,8 @@ input[type=number] {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 24px;
+    text-transform: none;
+    text-align: center;
   }
   .content-description {
     font-size: 18px;
@@ -6518,7 +6520,7 @@ input[type=number] {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    margin: 0 auto;
+    margin: 26px auto 74px;
     padding: 16px 0;
     font-size: 18px;
     line-height: 24px;
@@ -6529,6 +6531,10 @@ input[type=number] {
     color: rgba(65, 107, 229, 1);
     background-color: #FFFFFF;
   }
+  .specialty-blank__wrapper {
+      height: 1100px;
+    }
+  
 
 @media (max-width: 400px) {
   .demand-title-img {
@@ -6543,6 +6549,8 @@ input[type=number] {
   header .content .left-part .specialty-title {
     font-size: 44px;
     line-height: 56px;
+    text-align: left;
+    text-transform: uppercase;
   }
   .gradient-left {
     position: absolute;
@@ -6567,6 +6575,14 @@ input[type=number] {
     background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
     transform: matrix(-1, 0, 0, 1, 0, 0); 
   }
+  .gradient-bottom {
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
+    }
   .professions-main-title {
     text-align: left;
     text-transform: uppercase;
@@ -6583,6 +6599,9 @@ input[type=number] {
   .universities-main-title {
    text-align: left;
    text-transform: uppercase;
+  }
+  .more-info-button {
+    width: 100%;
   }
 }
 
