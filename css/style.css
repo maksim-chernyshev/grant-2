@@ -6349,12 +6349,7 @@ input[type=number] {
     display: none;
   }
   .show-text-link {
-    color: yellow;
-  }
-  .hide-text-link {
-    content: "Свернуть";
-    display: inline;
-    color: yellow;
+    color: #FFC000;
   }
   .specialty-header {
     background-color: #416BE5;
@@ -6556,10 +6551,13 @@ input[type=number] {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   .specialty-header {
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
+}
+
+@media (min-width: 700px) {
   header .content .left-part .specialty-title {
     font-size: 44px;
     line-height: 56px;
@@ -6616,6 +6614,15 @@ input[type=number] {
   }
   .more-info-button {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .specialty-header {
+    height: auto;
+  }
+  header .content .specialty-header-content {
+    width: 70%;
   }
 }
 
