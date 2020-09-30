@@ -1477,15 +1477,12 @@ header {
             text-transform: none;
             font-family: 'Lato';
           } }
-      header .content .left-part .content-description {
-        /* вписать стили для больших разрешений */
-      }
-      @media (max-width: 420px) {
+       @media (max-width: 420px) {
         header .content-description {
           margin-bottom: 32px;
           font-size: 18px;
           line-height: 24px;
-      } }
+        } }
       header .content .left-part h3 {
         margin-bottom: 1.5vw;
         text-align: left;
@@ -6553,7 +6550,10 @@ input[type=number] {
 
 @media (min-width: 500px) {
   .specialty-header {
-    padding-bottom: 40px;
+    padding: 0 30px 40px;
+  }
+  .professions-section .container {
+    padding: 0 30px;
   }
 }
 
