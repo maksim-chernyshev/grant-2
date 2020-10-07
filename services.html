@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервисы</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+</head>
+
+<body>
+    <!-- <div class="form-window">
+		<div class="form-header">
+			<a href="#" class="form-link form-link-active form-link-active-hide" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти в систему</a>
+			<a href="#" class="form-link form-link-active form-link-active-small" onclick="switchFormState('flex', 'none', 'none', 'flex', 'none')">Войти</a>
+			<a href="#" class="form-link" onclick="switchFormState('none', 'flex', 'none', 'flex', 'none')">Зарегестрироваться</a>
+			<button type="button" class="form-close" onclick="showMainForm('none')" >
+				<svg class="form-close-icon"  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M27 5L5 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+					<path d="M5 5L27 27" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"/>
+				</svg>
+			</button>
+		</div>
+		<div class="form-body">
+			<div class="form-socials">
+				<h5 class="form-socials-title">С помощью социальной сети</h5>
+				<div class="form-socials-list">
+					<a href="https://www.vk.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/vk.png" alt="Вконтакте" class="form-socials-icon">
+					</a>
+					<a href="https://www.google.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/gmail.png" alt="Gmail" class="form-socials-icon">
+					</a>
+					<a href="https://www.facebook.com" target="_blank" class="form-socials-link">
+						<img src="./img/form/facebook.png" alt="Facebook" class="form-socials-icon">
+					</a>
+				</div>
+			</div>
+			<form action="" class="form-login">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<button type="submit" class="form-login-button">Войти</button>
+				<button type="button" class="form-remind-password-button" onclick="switchFormState('none', 'none', 'flex', 'none', 'none')">Напомнить пароль</button>
+			</form>
+			<form action="" class="form-signup">
+				<h5 class="form-data-title">Или ввести свои данные</h5>
+				<label for="direction" class="form-label">
+					<input type="text" id="direction" class="form-input" placeholder="Направление" required>
+					<span class="form-prompt">Например: Экономика</span>
+				</label>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<input type="password" class="form-input" placeholder="Пароль" required>
+				<button type="submit" class="form-login-button">Зарегестрироваться</button>
+			</form>
+			<form action="" class="form-forgot-pass">
+				<h4 class="form-title">Введите Email<br> для востановления пароля</h4>
+				<input type="email" class="form-input" placeholder="Email" required>
+				<button type="submit" class="form-login-button" onclick="switchFormState('none', 'none', 'none', 'none', 'flex')">Восстановить</button>
+			</form>
+			<div class="form-message">
+				<img src="./img/form/message-icon.png" alt="message" class="form-message-icon">
+				<h4 class="form-title">
+					Письмо отправлено, проверьте пожалуйста почту
+				</h4>
+			</div>
+		</div>
+    </div>
+
+    <div class="form-fade-background" onclick="showMainForm('none')"></div> -->
+    
+    <header class="services-header">
+         <div class="gradient-left"></div>
+         <div class="wrap-bg-img">
+            <img src="img/services/header-classroom.png" class="services-header-img" alt="">
+            <img src="img/services/header-classroom-small.png" class="services-header-img--small" alt="">
+         </div>
+         <div class="gradient-right"></div>
+         <div class="gradient-bottom"></div>
+         <div class="container">
+            <div class="top">
+                <a href="index.html" class="logo"><img src="img/main/logo.svg" alt="logo"></a>
+                <a href="#" class="enter button-radius specialty-enter-button" onclick="showMainForm('flex')">Войти</a>
+            </div>
+
+            <div class="content">
+                <div class="left-part half-width services-header-content">
+                    <div class="service-top-wrapper">
+                        <h1 class="services-title">
+                            Фоксфорд
+                        </h1>
+                        <div class="services-menu-wrapper">
+                            <nav class="services-nav-block">
+                                <a href="" class="services-nav-item nav-active">О сервисе</a>
+                                <a href="" class="services-nav-item">Услуги</a>
+                                <a href="" class="services-nav-item">Отзывы</a>
+                                <a href="" class="services-nav-item nav-item--full">Похожие сервисы</a> 
+                                <a href="" class="services-nav-item nav-item--small">Похожее</a>                    
+                            </nav>
+                            <div class="services-rating-block">
+                                <div class="service-rating-amount">4.8</div>
+                                <div class="service-rating-stars">
+                                    <img class="star" src="/img/services/star-active.svg">
+                                    <img class="star" src="/img/services/star-active.svg">
+                                    <img class="star" src="/img/services/star-active.svg">
+                                    <img class="star" src="/img/services/star-active.svg">
+                                    <img class="star" src="/img/services/star-passive.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <article class="service-info-block">
+                        <div class="service-info-wrapper">
+                            <div class="service-logo">
+                                <img class="service-logo-img" src="img/services/foxford-logo.png">
+                            </div>
+                            <div class="service-description">
+                                Фоксфорд — онлайн-школа для учеников 1−11 классов, учителей и родителей. На онлайн-курсах и индивидуальных занятиях с репетитором школьники готовятся к ЕГЭ, ОГЭ, олимпиадам, изучают школьные предметы. Занятия ведут преподаватели МГУ, МФТИ, ВШЭ и других ведущих вузов страны. Для учителей проводятся курсы повы... Подробнее
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="services-section">
+            <div class="container">
+                <h3 class="services-main-title">Услуги</h3>
+
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Подготовка к ЕГЭ</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Курс подготовки к ЕГЭ по физике, 11 класс</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Подготовка к ЕГЭ</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Подготовка к ЕГЭ</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Подготовка к ЕГЭ</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+                <article class="service-card-block">
+                    <div class="service-card-top">
+                        <h4 class="service-card-title">Подготовка к ЕГЭ</h4>
+                        <div class="service-card-description">
+                            <div class="service-card-text">
+                                На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card-footer">
+                        <div class="service-price">5000 ₽</div>
+                        <a class="service-card-button" href="#">Воспользоваться</a>
+                    </div>
+                </article>
+
+                <a href="#" class="more-info-button button-radius services-more-info">
+                    Показать еще
+                </a>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="container">
+                <h3 class="reviews-main-title">Отзывы</h3>
+
+                <!-- ТУТ БУДЕТ СЛАЙДЕР С ОТЗЫВАМИ -->
+
+                <!-- <div class="main-items swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                </div> -->
+
+                <article class="review-card-block">
+                    <div class="review-person-name">
+                        Андрей Громов
+                    </div>
+                    <div class="review-text">
+                        На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике. Каждую неделю два занятия. На одном – теория и решение задач с кратким ответом, а на другом – решение задач с развёрнутым ответом. Всего 60 занятий, которые охватывают всю школьную программу по физике. программу по физике...
+                    </div>
+                </article>
+                <article class="review-card-block">
+                    <div class="review-person-name">
+                        Андрей Громов
+                    </div>
+                    <div class="review-text">
+                        На этом курсе вас будут учить думать и анализировать, а не заучивать решения типичных заданий прошлых лет. Курс готовит как к первой, так и к второй части ЕГЭ по физике.             
+                    </div>
+                </article>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+
+        <section class="similar-section">
+            <div class="container">
+                <h3 class="similar-main-title">Похожие сервисы</h3>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+                <div class="similar-card-block">
+                    <div class="similar-card-title">
+                        <img src="/img/services/author24-logo.png" alt="" class="similar-card-img">
+                    </div>
+                    <div class="similar-card-text">
+                        От 300 рублей на консультацию с преподавателями сервиса Автор 24
+                    </div>
+                        <a href="#" class="similar-card-button button-full">
+                            Использовать
+                        </a>
+                        <a href="#" class="similar-card-button button-mobile">
+                            Получить
+                        </a>
+                </div>
+            </div>
+
+            <a href="#" class="more-info-button button-radius">
+                Показать еще
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <nav class="footer-navigation">
+                        <ul class="footer-navigation__list">
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link" onclick="showUniversitiesForm()">
+                                    Регистрация в программе
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#" class="footer-navigation__link">
+                                    Правила и сроки проведения розыгрыша
+                                </a>
+                            </li>
+                            <li class="footer-navigation__item">
+                                <a href="#universities-signup" class="footer-navigation__link">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__icon-box">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer__image">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer-copyrights">
+                        <a href="#" class="footer-copyrights__link">
+                            <img src="./img/footer/footer-logo.svg" alt="" class="footer-copyrights__logo">
+                        </a>
+                        <p class="footer-copyrights__text">
+                            © 2019-2020 г. Все права защищены ООО «ИТ Сервис» ОГРН 1187847205424
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="footer-copyrights__icon">
+                            <img src="./img/footer/facebook1.svg" alt="" class="footer-copyrights__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/readmore.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/readMoreButtons.js"></script>
+
+</body>
+</html>
