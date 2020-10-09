@@ -6612,7 +6612,7 @@ input[type=number] {
   .specialty-header {
     height: auto;
   }
-  header .content .specialty-header-content {
+  .specialty-header-content {
     width: 70%;
   }
 }
@@ -6620,8 +6620,8 @@ input[type=number] {
 @media (min-width: 900px) {
   .specialty-header .top .enter {
     border-color: #fff;
-    color: #fff; }
-
+    color: #fff; 
+  }
   .demand-main-title {
     display: none;
   }
@@ -6665,7 +6665,7 @@ input[type=number] {
 .top {
   margin-bottom: 32px;
 }
-.service-header-content {
+.services-header-content {
   width: 100%;
 }
 .service-top-wrapper {
@@ -6674,6 +6674,7 @@ input[type=number] {
   justify-content: space-between;
 }
 .services-title {
+  font-family: "Lato Bold";
   margin-bottom: 12px;
   font-size: 32px;
   line-height: 40px;
@@ -6805,8 +6806,15 @@ input[type=number] {
   background-color: #6966E0;
 }
 .reviews-section {
-  display: flex;
   margin-bottom: 70px;
+}
+.reviews-section .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.reviews-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
 }
 .review-card-block {
   color: #4F4F4F;
@@ -6815,6 +6823,7 @@ input[type=number] {
   padding: 24px 14px;
 }
 .reviews-main-title {
+  width: 100%;
   color: #6966E0;
   text-transform: none;
   font-size: 32px;
@@ -6822,6 +6831,7 @@ input[type=number] {
   margin-bottom: 32px;
 }
 .review-person-name {
+  font-family: "Lato Black";
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 12px;
@@ -6883,8 +6893,19 @@ input[type=number] {
 .button-full {
   display: none;
 }
+.similar-block-button {
+  color: #416BE5;
+  border-color: #416BE5;
+}
+.similar-block-button:hover,
+.similar-block-button:active {
+  background-color: #416BE5;
+}
 
 @media(min-width: 700px) {
+  .services-header {
+    margin-bottom: 70px;
+  }
   .services-header-img {
     display: block;
   }
@@ -6939,6 +6960,9 @@ input[type=number] {
     text-align: left;
     text-transform: uppercase;
   }
+  .services-section {
+    margin-bottom: 40px;
+  }
   .services-section .container {
     justify-content: space-between;
   }
@@ -6979,5 +7003,47 @@ input[type=number] {
   }
   .services-more-info {
     margin-bottom: 0;
+  }
+  .reviews-main-title {
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .reviews-wrapper {
+    justify-content: space-between;
+  }
+  .review-card-block {
+    width: 48%;
+  }
+  .similar-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: normal;
+  }
+  .similar-main-title {
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .similar-card-block {
+    width: 20%;
+    margin: 0;
+    margin-right: 40px;
+    margin-bottom: 30px;
+  }
+  .similar-card-block:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media(min-width: 768px) {
+  .services-header {
+    height: auto;
+  }
+  .services-header .top .enter {
+    border-color: #fff;
+    color: #fff;
+  }
+  .service-info-block {
+    top: 270px;
   }
 }
