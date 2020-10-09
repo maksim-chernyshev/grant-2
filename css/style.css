@@ -6348,7 +6348,7 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
   }
-  header .content .left-part .specialty-title {
+  .specialty-title {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 24px;
@@ -6364,34 +6364,20 @@ input[type=number] {
     color: #FFC000;
     margin-bottom: 60px;
   }
-  .gradient-left {
-    position: absolute;
-    width: 30%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(89.51deg, #416BE5 7.87%, rgba(65, 107, 229, 0) 99.56%);
-  }
-  .mobile-student-head {
+  .specialty-header-img,
+  .specialty-header-img--small {
     position: absolute;
     height: 100%;
-    top: 0;
-    right: 80px;
+    width: 100%;
     opacity: 0.2;
     object-fit: cover;
   }
-  .gradient-right {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
-    transform: matrix(-1, 0, 0, 1, 0, 0); 
+  .specialty-header-img {
+    display: none;
   }
-  
+  .specialty-header-img--small {
+    display: block;
+  }
   .professions-section {
     padding: 48px 0 0;
   }
@@ -6563,8 +6549,7 @@ input[type=number] {
   }
   .specialty-blank__wrapper {
       height: 1100px;
-    }
-  
+  }
 
 @media (max-width: 400px) {
   .demand-title-img {
@@ -6573,16 +6558,19 @@ input[type=number] {
 }
 
 @media (min-width: 500px) {
-  .specialty-header {
-    padding: 0 30px 40px;
-  }
   .professions-section .container {
     padding: 0 15px;
   }
 }
 
 @media (min-width: 700px) {
-  header .content .left-part .specialty-title {
+  .specialty-header-img {
+    display: block;
+  }
+  .specialty-header-img--small {
+    display: none;
+  }
+  .specialty-title {
     font-size: 44px;
     line-height: 56px;
     text-align: left;
@@ -6590,37 +6578,6 @@ input[type=number] {
   }
   .specialty-header-content {
     align-items: flex-start;
-  }
-  .gradient-left {
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(89.51deg, #416BE5 7.87%, rgba(65, 107, 229, 0) 99.56%);
-  }
-  .mobile-student-head {
-    right: 100px;
-    opacity: 0.3;
-  }
-  .gradient-right {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
-    transform: matrix(-1, 0, 0, 1, 0, 0); 
-  }
-  .gradient-bottom {
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, #416BE5 7.53%, rgba(65, 107, 229, 0) 106.87%);
   }
   .professions-main-title {
     text-align: left;
@@ -6689,31 +6646,38 @@ input[type=number] {
 .services-header-img {
   display: none;
 }
+.services-header-img {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+  object-fit: cover;
+}
 .services-header-img--small {
   display: block;
   position: absolute;
   height: 100%;
-  top: 0;
-  left: 0;
+  width: 100%;
   opacity: 0.2;
   object-fit: cover;
 }
-.services-header-content {
-  display: flex;
-  flex-direction: column;
+.top {
+  margin-bottom: 32px;
+}
+.service-header-content {
+  width: 100%;
 }
 .service-top-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 15px;
 }
-header .content .left-part .services-title {
+.services-title {
   margin-bottom: 12px;
-}
-.services-menu-wrapper {
-  display: flex;
-  flex-direction: column;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: none;
 }
 .services-nav-block {
   display: flex;
@@ -6734,7 +6698,6 @@ header .content .left-part .services-title {
 }
 .services-rating-block {
   display: flex;
-  justify-content: flex-end;
   align-items: baseline;
 }
 .service-rating-amount {
@@ -6746,8 +6709,8 @@ header .content .left-part .services-title {
 .service-rating-stars .star:not(:first-child) {
   display: none;
 }
-.service-info-wrapper {
-  min-width: 90%;
+.service-info-block {
+  min-width: 96%;
   position: absolute;
   top: 180px;
   left: 50%;
@@ -6767,6 +6730,7 @@ header .content .left-part .services-title {
   margin-bottom: 70px;
 }
 .services-main-title {
+  width: 100%;
   font-size: 32px;
   line-height: 40px;
   text-align: center;
@@ -6774,7 +6738,17 @@ header .content .left-part .services-title {
   color: #6966E0;
   margin-bottom: 20px;
 }
+.services-section .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .service-card-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0px 4px 34px #CDCDCD;
   margin-bottom: 20px;
@@ -6795,6 +6769,8 @@ header .content .left-part .services-title {
   display: none;
 }
 .service-card-footer {
+  display: flex;
+  flex-direction: column;
   background-color: #E8F0FE;
   border-radius: 0 0 10px 10px;
   padding: 10px 20px 30px;
@@ -6906,4 +6882,102 @@ header .content .left-part .services-title {
 }
 .button-full {
   display: none;
+}
+
+@media(min-width: 700px) {
+  .services-header-img {
+    display: block;
+  }
+  .services-header-img--small {
+    display: none;
+  }
+  .services-title {
+    margin-right: 100%;
+    font-size: 44px;
+    line-height: 56px;
+    text-transform: uppercase;
+  }
+  .services-nav-block {
+    order: 0;
+    margin-left: 0;
+    align-items: center;
+  }
+  .services-nav-item {
+    margin-left: 0;
+    margin-right: 14px;
+    text-transform: uppercase;
+  }
+  .nav-active {
+    display: inline-block;
+  }
+  .services-rating-block {
+    margin-left: auto;
+  }
+  .service-rating-amount {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  .service-rating-stars {
+    display: flex;
+  }
+  .service-rating-stars .star:not(:first-child) {
+    display: block;
+    margin-left: 3px;
+  }
+  .service-info-block {
+    top: 240px;
+  }
+  .service-info-wrapper {
+    display: flex;
+  }
+  .service-logo {
+    min-width: 35%;
+    display: flex;
+    align-items: center;
+  }
+  .services-main-title {
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .services-section .container {
+    justify-content: space-between;
+  }
+  .service-card-block {
+    width: 48%;
+    height: auto;
+  }
+  .service-card-block:last-of-type {
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .service-card-top {
+    padding: 24px;
+  }
+  .service-card-title {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  .service-card-description {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    color: #4F4F4F;
+  }
+  .service-price {
+    margin-bottom: 0;
+  }
+  .service-card-button {
+    padding: 10px 15px;
+    line-height: 24px;
+  }
+  .service-card-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .services-more-info {
+    margin-bottom: 0;
+  }
 }
