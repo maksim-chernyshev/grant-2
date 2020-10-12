@@ -29,7 +29,7 @@ $(document).on('click', '.university-footer-navigation__item', function(){
 
 $(document).ready(function () {
 
-  var mySwiper1 = new Swiper('.girl-slider', {
+  var headerSwiper = new Swiper('.girl-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -40,9 +40,20 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-  })
+  });
 
-
+ var reviewsSwiper = new Swiper('.reviews-slider', {
+    slidesPerView: 1,
+    autoHeight: true,
+    loop: true,
+    effect: 'slide',
+    draggable: true,
+    speed: 500,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+ })
 
 
 

@@ -6836,16 +6836,19 @@ input[type=number] {
 .reviews-section .container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
-.reviews-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
+.reviews-slider {
+  overflow: unset;
+  width: 100%;
 }
 .review-card-block {
+  width: 300px;
   color: #4F4F4F;
   box-shadow: 0px 4px 16px #CDCDCD;
   border-radius: 10px;
   padding: 24px 14px;
+  margin: 0 auto;
 }
 .reviews-main-title {
   width: 100%;
@@ -7045,7 +7048,7 @@ input[type=number] {
     text-align: left;
     text-transform: uppercase;
   }
-  .reviews-wrapper {
+  .swiper-wrapper {
     justify-content: space-between;
   }
   .review-card-block {
