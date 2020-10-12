@@ -2084,7 +2084,7 @@ header {
     display: flex; }
     @media (max-width: 1200px) {
       .footer__wrapper {
-        max-width: 900px;
+        width: 100%;
         margin: auto; } }
     @media (max-width: 880px) {
       .footer__wrapper {
@@ -6342,6 +6342,10 @@ input[type=number] {
   .specialty-header {
     background-color: #416BE5;
     min-height: 500px;
+    padding-bottom: 30px;
+  }
+  .specialty-header .top {
+    padding-top: 15px;
   }
   .specialty-header-content {
     display: flex;
@@ -6378,6 +6382,11 @@ input[type=number] {
   .specialty-header-img--small {
     display: block;
   }
+  .specialty-header-button {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+  }
   .professions-section {
     padding: 48px 0 0;
   }
@@ -6390,6 +6399,7 @@ input[type=number] {
     margin-bottom: 28px;
   }
   .professions-section .container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6516,6 +6526,7 @@ input[type=number] {
     color: #BDBDBD;
   }
   .universities-section .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6566,6 +6577,7 @@ input[type=number] {
 @media (min-width: 700px) {
   .specialty-header-img {
     display: block;
+    opacity: 0.1;
   }
   .specialty-header-img--small {
     display: none;
@@ -6611,6 +6623,7 @@ input[type=number] {
 @media (min-width: 768px) {
   .specialty-header {
     height: auto;
+    padding-bottom: 70px;
   }
   .specialty-header-content {
     width: 70%;
@@ -6642,7 +6655,9 @@ input[type=number] {
   min-height: 500px;
   margin-bottom: 170px;
 }
-
+.services-header .top {
+  padding-top: 15px;
+}
 .services-header-img {
   display: none;
 }
@@ -6720,12 +6735,22 @@ input[type=number] {
   border-radius: 10px;
   padding: 24px 15px;
   box-shadow: 0px 4px 34px #4D4C72;
+  transition: height .2s ease-in-out;
 }
-.service-description {
+.service-description-block {
+  display: flex;
+  flex-direction: column;
+}
+.service-description-text {
+  height: 292px;
   color: #6966E0;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
+  overflow: hidden;
+}
+.service-info-block.on .service-description-text {
+  height: auto;
 }
 .services-section {
   margin-bottom: 70px;
@@ -6874,6 +6899,7 @@ input[type=number] {
   color: #4F4F4F;
   text-align: center;
   margin-bottom: 12px;
+  padding: 0 20px;
 }
 .similar-card-button {
   width: 70%;
@@ -6902,7 +6928,13 @@ input[type=number] {
   background-color: #416BE5;
 }
 
-@media(min-width: 700px) {
+@media (min-width: 505px) and (max-width: 700px){
+  .services-nav-block {
+    margin-left: 50%;
+  }
+}
+
+@media (min-width: 700px) {
   .services-header {
     margin-bottom: 70px;
   }
@@ -6946,15 +6978,20 @@ input[type=number] {
     margin-left: 3px;
   }
   .service-info-block {
+    min-height: 210px;
     top: 240px;
+    padding: 40px 30px;
   }
   .service-info-wrapper {
     display: flex;
   }
   .service-logo {
-    min-width: 35%;
+    min-width: 40%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .service-description-text {
+    height: 100px;
   }
   .services-main-title {
     text-align: left;

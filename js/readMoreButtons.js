@@ -13,7 +13,9 @@ $('.card-more').on('click', function(e) {
 
   var $this = $(this),
     $card = $this.closest('.profession-card-block'),
-    $cardTextMore = $card.find('.profession-card-text');
+    $cardTextMore = $card.find('.profession-card-text'),
+    $serviceHeaderInfo = $this.closest('.service-info-block'),
+    $serviceHeaderTextMore = $serviceHeaderInfo.find('.service-description-text');
 
   if (!$card.hasClass('on')) {
     $card.addClass('on');
@@ -24,4 +26,12 @@ $('.card-more').on('click', function(e) {
     $this.html('Подробнее');
   }
 
+  if (!$serviceHeaderInfo.hasClass('on')) {
+    $serviceHeaderInfo.addClass('on');
+    $serviceHeaderTextMore.slideDown(200);
+    $this.html('Скрыть');
+  } else {
+    $serviceHeaderInfo.removeClass('on');
+    $this.html('Подробнее');
+  }
 });
